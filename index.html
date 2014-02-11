@@ -1,6 +1,7 @@
 ---
 layout: default
-title: 我的Blog
+title: While's Blog
+description: here is the description
 ---
 <h2>{{ page.title }}</h2>
 <p>最新文章</p>
@@ -9,3 +10,37 @@ title: 我的Blog
 	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+
+
+	<header id="site-head">
+		<div class="vertical">
+			<div id="site-head-content" class="inner">
+				<h1 class="blog-title">{{ page.title }}</h1>
+				<h2 class="blog-description">{{ page.description }}</h2>
+			</div>
+		</div>
+	</header>
+
+	<main role="main" class="content">
+
+		{% for post in site.posts %}
+		<article class="post">
+			<header class="post-header">
+				<span class="post-meta">
+					<time datetime="2012-11-29 23:59:59">{{ post.date | date_to_string }}</time> on tag_1, tag_2
+				</span>
+				<h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+			</header>
+			<section class="post-excerpt">
+				<p>article excerpt &hellip;</p>
+			</section>
+		</article>
+		{% endfor %}
+		
+		<nav role="pagination" class="pagination">
+			<a href="/" class="newer-posts">←</a>
+			<span class="page-number">2 | 3</span>
+			<a href="/page/3/" class="older-posts">→</a>
+		</nav>
+
+	</main>
