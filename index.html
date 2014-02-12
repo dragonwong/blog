@@ -1,6 +1,6 @@
 ---
-title: While's Blog 1
-description: here is the description
+title: While's Blog
+description: Here is my blog.
 ---
 
 {% include header.html %}
@@ -19,7 +19,7 @@ description: here is the description
 		<article class="post">
 			<header class="post-header">
 				<span class="post-meta">
-					<time datetime="2012-11-29 23:59:59">{{ post.date | date_to_string }}</time> on tag_1, tag_2
+					<time datetime="{{ post.date | date_to_rfc822 }}">{{ post.date | date_to_string }}</time> on tag_1, tag_2
 				</span>
 				<h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 			</header>
