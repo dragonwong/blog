@@ -19,7 +19,7 @@ description: Here is my blog.
 		<article class="post">
 			<header class="post-header">
 				<span class="post-meta">
-					<time datetime="{{ post.date | date_to_rfc822 }}">{{ post.date | date_to_string }}</time> on tag_1, tag_2
+					<time datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date_to_string }}</time> on tag_1, tag_2
 				</span>
 				<h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 			</header>
