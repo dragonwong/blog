@@ -24,7 +24,7 @@ description: Here is my blog.
 				<h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 			</header>
 			<section class="post-excerpt">
-				<p>article excerpt &hellip;</p>
+				<p>{{ post.excerpt | strip_html }}</p>
 			</section>
 		</article>
 		{% endfor %}
