@@ -1,47 +1,49 @@
 ---
-layout: default
+
 ---
 
-<main class="content" role="main">
+{% include header.html %}
+	<main class="content" role="main">
 
-    <article class="post">
-        
-        <header class="post-header">
-            <a id="blog-logo" href="http://blog-43648.apne1.actionbox.io:1234/">WHILE'S BLOG</a>
-        </header>
-        
-        <span class="post-meta"><time datetime="2013-11-20">{{ post.date | date_to_string }}</time> </span>
+	    <article class="post">
+	        
+	        <header class="post-header">
+	            <a id="blog-logo" href="http://blog-43648.apne1.actionbox.io:1234/">WHILE'S BLOG</a>
+	        </header>
+	        
+	        <span class="post-meta"><time datetime="2013-11-20">{{ post.date | date_to_string }}</time> </span>
 
-        <h1 class="post-title">{{ post.title }}</h1>
+	        <h1 class="post-title">{{ post.title }}</h1>
 
-        <section class="post-content">
-			
-			{{ content }}
-            
-        </section>
+	        <section class="post-content">
+				
+				{{ content }}
+	            
+	        </section>
 
-        <footer class="post-footer">
-            
-            <section class="author">
-                <h4>while</h4>
-                <p>replace fucking with coding</p>
-            </section>
+	        <footer class="post-footer">
+	            
+	            <section class="author">
+	                <h4>while</h4>
+	                <p>replace fucking with coding</p>
+	            </section>
 
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="http://twitter.com/share?text=getElementById&amp;url=http://blog-43648.apne1.actionbox.io:1234//getelementbyid/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog-43648.apne1.actionbox.io:1234//getelementbyid/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog-43648.apne1.actionbox.io:1234//getelementbyid/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
+	            <section class="share">
+	                <h4>Share this post</h4>
+	                <a class="icon-twitter" href="http://twitter.com/share?text=getElementById&amp;url=http://blog-43648.apne1.actionbox.io:1234//getelementbyid/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+	                    <span class="hidden">Twitter</span>
+	                </a>
+	                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://blog-43648.apne1.actionbox.io:1234//getelementbyid/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+	                    <span class="hidden">Facebook</span>
+	                </a>
+	                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://blog-43648.apne1.actionbox.io:1234//getelementbyid/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	                    <span class="hidden">Google+</span>
+	                </a>
+	            </section>
 
-        </footer>
+	        </footer>
 
-    </article>
+	    </article>
 
-</main>
+	</main>
+{% include footer.html %}
