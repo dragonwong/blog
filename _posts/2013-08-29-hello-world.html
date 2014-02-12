@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: article
 title: 你好，世界
 ---
-<h2>{{ page.title }}</h2>
-<p>我的第一篇文章</p>
-<p>{{ page.date | date_to_string }}</p>
+<p>昨晚突然想到一个问题，为啥<code>getElementById</code>是<code>document</code>的特有的呢，为啥<code>Element</code>没有呢？</p>
+
+<p>今天谷歌之才明白，id本来就应该是独一无二的，所以从document搜索得到的就应该是想要的元素，因此，Element就不需要该方法了。</p>
