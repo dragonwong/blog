@@ -4,10 +4,10 @@
 	    <article class="post">
 	        
 	        <header class="post-header">
-	            <a id="blog-logo" href="http://blog-43648.apne1.actionbox.io:1234/">WHILE'S BLOG</a>
+	            <a id="blog-logo" href="http://dragonwong.github.io/blog/">WHILE'S BLOG</a>
 	        </header>
 	        
-	        <span class="post-meta"><time datetime="2013-11-20">{{ page.date | date_to_string }}</time> </span>
+	        <span class="post-meta"><time datetime="{{ page.date | date: '%Y-%m-%-d' }}">{{ page.date | date_to_string }}</time> </span>
 
 	        <h1 class="post-title">{{ page.title }}</h1>
 
