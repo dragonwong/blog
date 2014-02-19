@@ -6,50 +6,50 @@ title: js中的引用与复制
 
 <p>比如：</p>
 
-<pre><code class="javascript"><span class="keyword">var</span> a = {};
-<span class="comment">//undefined</span>
-<span class="keyword">var</span> b = a;
-<span class="comment">//undefined</span>
+<pre><code class='javascript'>var a = {};
+//undefined
+var b = a;
+//undefined
 b
-<span class="comment">//Object {}</span>
-b.x = <span class="number">1</span>;
-<span class="comment">//1</span>
+//Object {}
+b.x = 1;
+//1
 b
-<span class="comment">//Object {x: 1}</span>
+//Object {x: 1}
 a
-<span class="comment">//Object {x: 1}</span>
-a = {y: <span class="number">2</span>};
-<span class="comment">//Object {y: 2}</span>
+//Object {x: 1}
+a = {y: 2};
+//Object {y: 2}
 b
-<span class="comment">//Object {x: 1}</span></code></pre>
+//Object {x: 1}</code></pre>
 
 <p>可以看到，在对a重新用“=”赋值之前，一切都符合期望，可以是用“=”赋值之后，仿佛切断了b与a原来的引用关系。</p>
 
 <p>数组中也有类似现象：</p>
 
-<pre><code class="javascript"><span class="keyword">var</span> a = [];
-<span class="comment">//undefined</span>
+<pre><code class='javascript'>var a = [];
+//undefined
 b = a;
-<span class="comment">//[]</span>
+//[]
 b
-<span class="comment">//[]</span>
-a.push(<span class="number">1</span>);
-<span class="comment">//1</span>
+//[]
+a.push(1);
+//1
 b
-<span class="comment">//[1]</span>
-a = [<span class="number">2</span>];
-<span class="comment">//[2]</span>
+//[1]
+a = [2];
+//[2]
 b
-<span class="comment">//[1]</span></code></pre>
+//[1]</code></pre>
 
 <p>prototype也是：</p>
 
-<pre><code class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">()</span>{</span>}
-<span class="keyword">var</span> friend = <span class="keyword">new</span> Person();
-<span class="comment">/*Person.prototype = {
-    a: 2
-};*/</span>
-Person.prototype.a = <span class="number">1</span>;
+<pre><code class='javascript'>function Person(){}
+var friend = new Person();
+/*Person.prototype = {
+	a: 2
+};*/
+Person.prototype.a = 1;
 console.log(friend.a);</code></pre>
 
 <p>结果输出1，如果去掉注释，结果是undefined。</p>

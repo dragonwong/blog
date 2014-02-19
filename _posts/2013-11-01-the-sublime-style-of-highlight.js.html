@@ -1,0 +1,73 @@
+---
+layout: article
+title: the sublime style of highlight.js
+---
+
+<p>html</p>
+
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;About&lt;/title&gt;
+&lt;style&gt;
+div .class #id [type="button"]:hover{
+	color: red;
+	font-size: 2em;
+	background: url(img/a.jpg) no-repeat 2px 10%;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="d-id" class="d-class"&gt;
+		haha中文怎么就丑了？？
+	&lt;/div&gt;
+&lt;script&gt;
+	//lib
+	Element.prototype.hasClass = function(name){
+	    return this.className.match(new RegExp('\\b'+name+'(\\s|$)','g'));
+	};
+	var arr = [12, "wyy"];
+	(function(){
+		alert();
+	});
+	function myAlert(){
+		alert();
+	}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>css</p>
+
+<pre><code class="css">div .class #id [type="button"]:hover{
+	color: red;
+	font-size: 2em;
+	background: url(img/a.jpg) no-repeat 2px 10%;
+}</code></pre>
+
+<p>js</p>
+
+<pre><code class="javascript">//lib
+Element.prototype.hasClass = function(name){
+    return this.className.match(new RegExp('\\b'+name+'(\\s|$)','g'));
+};
+var arr = [12, "wyy"];
+(function(){
+	alert();
+});
+function myAlert(){
+	alert();
+}</code></pre>
+
+<p>json</p>
+
+<pre><code class="json">{
+	"aa": 12,
+	"afd": "srfs",
+	"zfsa": [
+		12, "123"
+	]
+}</code></pre>
+
