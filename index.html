@@ -21,7 +21,7 @@ description: Here is my blog.
 				<span class="post-meta">
 					<time datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date_to_string }}</time> on tag_1, tag_2
 				</span>
-				<h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+				<h2 class="post-title"><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h2>
 			</header>
 			<section class="post-excerpt">
 				<p>{{ post.excerpt | strip_html }}</p>
