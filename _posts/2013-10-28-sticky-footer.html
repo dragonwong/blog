@@ -1,0 +1,54 @@
+---
+layout: article
+title: Sticky Footer
+---
+
+<p>以前也遇到过，要让footer一直吸附于页面底部，这个需求还是挺多的。今天来整理一下。</p>
+
+<p>主要还是学的人家的：<a href="http://ryanfait.com/sticky-footer/" target="_blank">《CSS Sticky Footer》</a>。自己也写了一个demo，小优化下了，看代码。</p>
+
+<p>html：</p>
+
+<pre class="html"><code>&lt;body&gt;  
+    &lt;div class="main"&gt;
+        &lt;header&gt;
+            ...
+        &lt;/header&gt;
+
+        &lt;div class="body"&gt;
+            ...
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;footer class="foot"&gt;
+        ...
+    &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+<p>css（只给出关键的样式）：</p>
+
+<pre class="css"><code>    /* main css */  
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+    }
+        .main{
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+        }
+            .body{
+                padding-bottom: 40px;
+            }
+        footer{
+            margin-top: -40px;
+            height: 40px;
+            line-height: 40px;
+        }</code></pre>
+
+<p>自己做了一个优化，去除了<code>&lt;div class=".push"&gt;</code>，于是控制<code>&lt;footer&gt;</code>和<code>&lt;div class="main"&gt;</code>间隙的任务就落到<code>&lt;div class="main"&gt;</code>中最后一个元素（即<code>&lt;div class="body"&gt;</code>）身上。给<code>&lt;div class="body"&gt;</code>添加样式<code>padding-bottom</code>即可，距离至少是要是<code>&lt;footer&gt;</code>的高。</p>
+
+<p>传送门：<a href="https://rawgithub.com/dragonwong/mylib/master/component/sticky-footer.htm" target="_blank">demo</a>，<a href="https://github.com/dragonwong/mylib/blob/master/component/sticky-footer.htm" target="_blank">github</a></p></div>
