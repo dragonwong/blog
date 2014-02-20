@@ -1,0 +1,46 @@
+---
+layout: article
+title: js实现trim函数的分析
+---
+
+<p>昨晚看到司徒正美的一篇关于js实现trim函数的文章，着实涨了不少姿势。</p>
+
+<p>先给出原文链接：<a href="http://www.cnblogs.com/rubylouvre/archive/2009/09/18/1568794.html" target="_blank">《JavaScript trim函数大赏》</a></p>
+
+<p>挑几点感慨下：</p>
+
+<p>如果是我来写可能是这种：</p>
+
+<pre><code class="javascript">String.prototype.trim = function() {
+    return  this.replace(/^\s+|\s+$/g, '');
+}</code></pre>
+
+<p>同类写法中效率较高的竟然是这种：</p>
+
+<pre class="javascript"><code>String.prototype.trim = function() {  
+    return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+}</code></pre>
+
+<p>有两点，一是正则<code>\s\s*</code>与<code>\s+</code>，前者的效率竟然高于后者，而是两次正则的效率竟然高于一次（据说是浏览器优化）。</p>
+
+<p>后来看到下面这一种，我又惊呆了：</p>
+
+<pre><code class="javascript">String.prototype.trim = function() {
+      var str = this,
+      whitespace = ' \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000';
+      for (var i = 0,len = str.length; i &lt; len; i++) {
+        if (whitespace.indexOf(str.charAt(i)) === -1) {
+              str = str.substring(i);
+              break;
+           }
+      }
+      for (i = str.length - 1; i &gt;= 0; i--) {
+        if (whitespace.indexOf(str.charAt(i)) === -1) {
+              str = str.substring(0, i + 1);
+              break;
+        }
+      }
+      return whitespace.indexOf(str.charAt(0)) === -1 ? str : '';
+}</code></pre>
+
+<p>这是效率最高的一种！</p>
