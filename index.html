@@ -31,7 +31,7 @@ description: Here is my blog.
 		<nav role="pagination" class="pagination">
 
 			{% if paginator.previous_page %}
-			<a class="newer-posts" href="{{ site.base_url }}/page/{{ paginator.previous_page }}">←</a>
+			<a class="newer-posts" href="{{ site.base_url }}/page/{{ paginator.previous_page_path }}">←</a>
 			{% endif %}
 
 			<span class="page-number">{{ paginator.page }} | {{ paginator.total_pages }}</span>
