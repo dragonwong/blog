@@ -1,0 +1,49 @@
+---
+layout: article
+title: &lt;pre&gt;和&lt;code&gt;
+---
+
+<p>两天在做代码的排版遇到了他俩，好奇研究了下。</p>
+
+<h3 id="codeltpregtcode"><code>&lt;pre&gt;</code></h3>
+
+<p>官方解释：</p>
+
+<blockquote>
+  <p>The &lt;pre&gt; element represents a block of preformatted text.</p>
+</blockquote>
+
+<p><code>&lt;pre&gt;</code>代表一块预编排的文本。这里可以得知两个信息，一是<code>&lt;pre&gt;</code>是块级元素，二是<code>&lt;pre&gt;</code>会保留原有格式。</p>
+
+<p>看看chrome的预置样式：</p>
+
+<pre><code class="css">pre, xmp, plaintext, listing{
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}</code></pre>
+
+<p><code>&lt;pre&gt;</code>保留原有格式的秘密就在于<code>white-space: pre;</code>这条样式里，传送门：<a href="http://www.w3.org/community/webed/wiki/CSS/Properties/white-space" target="_blank">CSS/Properties/white-space</a>。</p>
+
+<h3 id="codeltcodegtcode"><code>&lt;code&gt;</code></h3>
+
+<p>官方解释：</p>
+
+<blockquote>
+  <p>The &lt;code&gt; element represents a fragment of computer code.</p>
+</blockquote>
+
+<p>我觉得<code>&lt;code&gt;</code>比<code>&lt;pre&gt;</code>更加语义化，他直接对外宣称“这是一段计算机代码”。</p>
+
+<p>看看chrome的预置样式：</p>
+
+<pre><code class="css">tt, code, kbd, samp {
+    font-family: monospace;
+}</code></pre>
+
+<p>很简单，只是让他以等宽字体显示。</p>
+
+<p>我们经常会让<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code>一起使用，由于<code>&lt;pre&gt;</code>会保留换行，所以<code>&lt;code&gt;</code>后的换行也会被保留，导致页面展示时代码开头会多出一个空白行，对此，不得不在编辑时删除<code>&lt;code&gt;</code>与代码之间的空格。下面是对<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code>一些情况的截图，其中绿色背景是<code>&lt;pre&gt;</code>，黄色背景是<code>&lt;code&gt;</code>。</p>
+
+<img src="{{ site.base_url }}/img/20131101/pre_and_code.png" alt="diff pre code">
