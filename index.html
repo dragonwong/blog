@@ -28,11 +28,17 @@ description: Here is my blog.
 		</article>
 		{% endfor %}
 		
-		<!-- 
 		<nav role="pagination" class="pagination">
-			<a href="/" class="newer-posts">←</a>
-			<span class="page-number">2 | 3</span>
-			<a href="/page/3/" class="older-posts">→</a>
+
+			{% if paginator.previous_page %}
+			<a class="newer-posts" href="/page/{{ paginator.previous_page }}">←</a>
+			{% else %}
+
+			<span class="page-number">{{ paginator.page }} | {{ paginator.total_pages }}</span>
+
+			{% if paginator.next_page %}
+			<a class="older-posts" href="/page/{{ paginator.next_page }}">→</a>
+			{% endif %}
 		</nav>
 		-->
 		
