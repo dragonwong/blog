@@ -32,7 +32,7 @@ description: Here is my blog.
 
 			{% if paginator.previous_page %}
 			<a class="newer-posts" href="/page/{{ paginator.previous_page }}">←</a>
-			{% else %}
+			{% endif %}
 
 			<span class="page-number">{{ paginator.page }} | {{ paginator.total_pages }}</span>
 
