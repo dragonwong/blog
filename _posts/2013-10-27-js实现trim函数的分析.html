@@ -26,21 +26,21 @@ title: js实现trim函数的分析
 <p>后来看到下面这一种，我又惊呆了：</p>
 
 <pre><code class="javascript">String.prototype.trim = function() {
-      var str = this,
-      whitespace = ' \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000';
-      for (var i = 0,len = str.length; i &lt; len; i++) {
+    var str = this,
+    whitespace = ' \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000';
+    for (var i = 0,len = str.length; i &lt; len; i++) {
         if (whitespace.indexOf(str.charAt(i)) === -1) {
-              str = str.substring(i);
-              break;
-           }
-      }
-      for (i = str.length - 1; i &gt;= 0; i--) {
-        if (whitespace.indexOf(str.charAt(i)) === -1) {
-              str = str.substring(0, i + 1);
-              break;
+            str = str.substring(i);
+            break;
         }
-      }
-      return whitespace.indexOf(str.charAt(0)) === -1 ? str : '';
+    }
+    for (i = str.length - 1; i &gt;= 0; i--) {
+        if (whitespace.indexOf(str.charAt(i)) === -1) {
+            str = str.substring(0, i + 1);
+            break;
+        }
+    }
+    return whitespace.indexOf(str.charAt(0)) === -1 ? str : '';
 }</code></pre>
 
 <p>这是效率最高的一种！</p>

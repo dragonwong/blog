@@ -1,0 +1,32 @@
+---
+layout: article
+title: several points in fe
+---
+
+<p>Note several points in fe I met these days. (ps: I have been in Qunar as internship since this Monday.)</p>
+
+<p>1. In css, <code>''</code> is not need in <code>()</code>. For example:</p>
+
+<pre class="css"><code>    background: url(dancheng.png) no-repeat;</code></pre>
+
+<p>2. In js, <code>+</code>Setting the operation in front of the code could been using to convert String to Number, but will not change the value. For example:</p>
+
+<pre class="javascript"><code>var a = '1',
+    b = +a;
+
+//  a -> '1'
+//  b -> 1</code></pre>
+
+<p>3. When we need to scroll the page, use <code>document.documentElement.scrollTop</code>, do not use <code>document.body.scrollTop</code></p>
+
+<p>4. Declarative value and funtion could not be deleted. For example:</p>
+
+<pre class="javascript"><code>var a = 10;
+delete a;
+alert(a); // 10
+
+function func() {}
+delete func;
+alert(func); // func code</code></pre>
+
+<p>For more info, visit <a href="http://www.cnblogs.com/snandy/archive/2013/03/06/2944815.html" target="_blank">JavaScript中delete操作符不能删除的对象</a></p>
