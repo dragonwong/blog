@@ -1,4 +1,4 @@
 base_title: While's Blog
 base_url: http://dragonwong.github.io/blog
 paginate: 5
-paginate_path: "/page:num"
+paginate_path: "/page/:num"
