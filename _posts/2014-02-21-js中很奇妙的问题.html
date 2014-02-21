@@ -7,7 +7,7 @@ title: js中很奇妙的问题
 
 <p>先看第一个，结果应该是什么呢？</p>
 
-<pre><code class="javascript">var length = 10
+<pre><code class="javascript">var length = 10;
 function fn(){
     alert(this.length);
 }
@@ -17,13 +17,13 @@ var obj = {
         fn();
         arguments[0]();
     }
-}
+};
 
 obj.method(fn);</code></pre>
 
-<p>第二个结果应该想不到吧，是1。</p>
+<p>第二个alert应该想不到吧，是1。</p>
 
-<p><code>fn();</code>的<code>this</code>指向的是<code>window</code>，而<code>arguments[0]()</code>中的this指向的是<code>arguments</code>对象，所以输出的是<code>arguments.length</code></p>
+<p><code>fn();</code>的<code>this</code>指向的是<code>window</code>，而<code>arguments[0]();</code>中的this指向的是<code>arguments</code>对象，所以输出的是<code>arguments.length</code>。</p>
 
 <p>第二个更屌：</p>
 
@@ -35,6 +35,6 @@ alert(c.a);</code></pre>
 
 <p>在<code>c.a = c = [];</code>中，首先执行的是<code>c.a</code>，分配一个内存来引用它，假设叫<code>temp</code>，这时<code>temp</code>指向的是<code>c.a</code>，然后执行<code>c = []</code>，结果是<code>[]</code>赋给<code>temp</code>。关键的地方来了。</p>
 
-<p>取道值的temp去寻找它的引用<code>c.a</code>，但是，此时<code>c</code>已经是<code>[]</code>了，<code>c.a</code>已经不存在了，<code>temp</code>于是不了了之，被内存回收了。至此，<code>c</code>是一个空数组，而<code>c.a</code>不存在。</p>
+<p>取到值的temp去寻找它的引用<code>c.a</code>，但是，此时<code>c</code>已经是<code>[]</code>了，<code>c.a</code>已经不存在了，<code>temp</code>于是不了了之，被内存回收了。至此，<code>c</code>是一个空数组，而<code>c.a</code>未定义。</p>
 
 <p>参考：<a href="http://cmc3.cn/n/217.html" target="_blank">《赋值运算符:"=" 写了10年javascript未必全了解的"="》</a></p>
