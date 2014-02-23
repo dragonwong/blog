@@ -13,13 +13,13 @@ title: js实现trim函数的分析
 
 <pre><code class="javascript">String.prototype.trim = function() {
     return  this.replace(/^\s+|\s+$/g, '');
-}</code></pre>
+};</code></pre>
 
 <p>同类写法中效率较高的竟然是这种：</p>
 
 <pre class="javascript"><code>String.prototype.trim = function() {  
     return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-}</code></pre>
+};</code></pre>
 
 <p>有两点，一是正则<code>\s\s*</code>与<code>\s+</code>，前者的效率竟然高于后者，而是两次正则的效率竟然高于一次（据说是浏览器优化）。</p>
 
@@ -41,6 +41,6 @@ title: js实现trim函数的分析
         }
     }
     return whitespace.indexOf(str.charAt(0)) === -1 ? str : '';
-}</code></pre>
+};</code></pre>
 
 <p>这是效率最高的一种！</p>
