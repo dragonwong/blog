@@ -22,9 +22,7 @@ description: Here is my blog.
 					{% if post.tags %}
 						{% for tag in post.tags %}
 							{% if forloop.first %}
-								 on {{tag}}
-							{% else %}
-								, {{tag}}
+								 on {{tag}}{% else %}, {{tag}}
 							{% endif %}
 						{% endfor %}
 					{% endif %}
