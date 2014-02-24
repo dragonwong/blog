@@ -20,7 +20,7 @@ description: Here is my blog.
 				<span class="post-meta">
 					<time datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date_to_string }}</time>
 					{% if post.tags %}
-						on {{ post.tags | join: ','}}
+						on {{ post.tags | join: ', '}}
 					{% endif %}
 				</span>
 				<h2 class="post-title"><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h2>
