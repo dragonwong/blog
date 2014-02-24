@@ -245,9 +245,8 @@ code, tt {
 }
 
 kbd {
-    display: inline-block;
     margin-bottom: 0.4em;
-    padding: 1px 8px;
+    padding: 4px 5px;
     border: #ccc 1px solid;
     color: #666;
     text-shadow: #fff 0 1px 0;
