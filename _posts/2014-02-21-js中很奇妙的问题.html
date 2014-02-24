@@ -30,12 +30,22 @@ obj.method(fn);</code></pre>
 
 <pre><code class="javascript">var c = {};
 c.a = c = [];
-alert(c.a);</code></pre>
+console.log(c.a);</code></pre>
 
-<p>结果是<code>undefined</code>。张凯老师是这样解释的：</p>
+<p>结果是<code>undefined</code>。结合张凯老师的解释，我这样说服我自己：</p>
 
-<p>第一行<code>var c = {};</code>，首先在内存中创建一个对象，假设叫<code>_temp_obj</code>，<code>c</code>指向<code>_temp_obj</code>。第二行<code>c.a = c = [];</code>，最先计算的是<code>c.a</code>，即给<code>_temp_obj</code>创建了一个<code>a</code>属性，然后执行<code>c = []</code>（此时，<code>c</code>不再指向<code>_temp_obj</code>，而是指向一个新的空数组），并将结果<code>[]</code>赋给<code>_temp_obj.a</code>。</p>
+<p>第一行：<code>var c = {};</code>，在内存中创建一个对象，假设叫<code>_temp_obj</code>，<code>c</code>指向<code>_temp_obj</code>。</p>
 
-<p>随后，<code>_temp_obj</code>因为未被引用，被内存回收。至此<code>c</code>是一个数组，没有属性<code>a</code></p>
+<p>第二行<code>c.a = c = [];</code>，最先计算的是<code>c.a</code>，即给<code>_temp_obj</code>创建了一个<code>a</code>属性，然后执行<code>c = []</code>（此时，<code>c</code>不再指向<code>_temp_obj</code>，而是指向一个新的空数组），并将结果<code>[]</code>赋给<code>_temp_obj.a</code>。随后，<code>_temp_obj</code>因为未被引用，应该会被内存回收。</p>
+
+<p>至此<code>c</code>是一个数组，没有属性<code>a</code>。</p>
+
+<p>验证可以跑下面这段代码：</p>
+
+<pre><code class="javascript">var c = {},
+b = c;
+c.a = c = [];
+console.log(c.a);
+console.log(b);</code></pre>
 
 <p>参考：<a href="http://cmc3.cn/n/217.html" target="_blank">《赋值运算符:"=" 写了10年javascript未必全了解的"="》</a></p>
