@@ -9,8 +9,8 @@
 	        
 	        <span class="post-meta">
 	        	<time datetime="{{ page.date | date: '%Y-%m-%-d' }}">{{ page.date | date_to_string }}</time>
-				{% if tags %}
-					on {{ tags | join: ', '}}
+				{% if page.tags %}
+					on {{ page.tags | join: ', '}}
 				{% endif %}
 	        </span>
 
