@@ -31,46 +31,39 @@
 
 /* Import the font file with the icons in it */
 @font-face {
-    font-family: 'icons';
-    src:url('../fonts/icons.eot');
-    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icons.woff') format('woff'),
-        url('../fonts/icons.ttf') format('truetype'),
-        url('../fonts/icons.svg#icons') format('svg');
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf') format('truetype'),
+        url('../fonts/icomoon.woff') format('woff'),
+        url('../fonts/icomoon.svg#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
-    font-family: 'icons';
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
     speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+
+    /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
-    text-decoration: none;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* Each icon is created by inserting the corret character into the 
    content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
-    content: "\e000";
+.icon-github:before {
+    content: "\e6ee";
 }
-.icon-feed:before {
-    content: "\e001";
-}
-.icon-twitter:before {
-    content: "\e002";
-    font-size: 1.1em;
-}
-.icon-google-plus:before {
-    content: "\e003";
-}
-.icon-facebook:before {
-    content: "\e004";
+.icon-rss:before {
+    content: "\e66a";
 }
 
 
@@ -539,27 +532,6 @@ table.plain {
     margin-right: 180px;
 }
 
-/* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
-.post-footer .share {
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 140px;
-}
-
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1.4rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
-}
 
 
 /* ==========================================================================
@@ -876,22 +848,11 @@ table.plain {
 
     .post-footer {
         padding: 4rem 0;
-        text-align: center;
     }
 
     .post-footer .author {
         margin: 0 0 2rem 0;
         padding: 0 0 1.6rem 0;
-        border-bottom: #EBF2F6 1px dashed;
-    }
-
-    .post-footer .share {
-        position: static;
-        width: auto;
-    }
-
-    .post-footer .share a {
-        margin: 1.4rem 0.8rem 0 0.8rem;
     }
 
     .site-footer {
