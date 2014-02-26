@@ -343,7 +343,7 @@ table.plain {
     position: relative;
     width:80%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding-bottom: 2rem;
     border-bottom: #EBF2F6 1px solid;
     word-break: break-word;
@@ -450,6 +450,7 @@ table.plain {
 /* Tweak the .post wrapper style */
 .post-template .post {
     margin-top: 0;
+    margin-bottom: 0;
     border-bottom: none;
     padding-bottom: 0;
 }
@@ -619,7 +620,7 @@ table.plain {
         font-size: 0.9em;
         line-height: 1.6em;
     }
-    
+
 
     h1 {
         font-size: 4.8rem;
