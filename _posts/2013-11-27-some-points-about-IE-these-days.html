@@ -1,0 +1,29 @@
+---
+layout: article
+title: some points about IE these days
+tags: js ie
+---
+
+<h3>Array.prototype.slice.call() in ie</h3>
+
+<p>Array.prototype.slice.call()方法ie8及其以下版本都不支持。</p>
+
+<blockquote>
+	<p>我们知道，Array.prototype.slice.call(arguments)能将具有length属性的对象转成数组，除了IE下的节点集合（因为ie下的dom对象是以com对象的形式实现的，js对象与com对象不能进行转换）</p>
+</blockquote>
+
+<p>说到这，想起<code>Array.prototype.slice()</code>另一种简易的写法<code>[].slice()</code>，据说性能上后者差那么一点，因为实例了一个<code>[]</code>。</p>
+
+<p>参考：<a href="http://www.cnblogs.com/littledu/archive/2012/05/19/2508672.html" target="_blank">博客园-肥杜-《Array.prototype.slice.call(arguments)》</a></p>
+
+<h3>Element in IE</h3>
+
+<P><code>Element</code>元素在ie7及其以下版本都不支持。</P>
+
+所以用<code>Element.prototype</code>添加自定义方法在ie7下都没那么简单了。想到的解决途径是类似jq那样，用自定义的方法（<code>$()</code>）取元素，返回的自定义的类<code>Element</code>元素。
+
+<p>参考：<a href="http://stackoverflow.com/questions/597268/element-prototype-in-ie7" target="_blank">javascript - Element.prototype in IE7? - Stack Overflow</a></p>
+
+<h3>&lt;!DOCTYPE&rt; declaration in IE</h3>
+
+<p>文档声明在某些版本IE（具体记不清了，8及其以下？）中如果之前有输出其它字符（包括空格和换行）会导致触发怪异（quirks）模式。</p>
