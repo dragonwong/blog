@@ -343,7 +343,7 @@ table.plain {
     position: relative;
     width:80%;
     max-width: 700px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding-bottom: 2rem;
     border-bottom: #EBF2F6 1px solid;
     word-break: break-word;
