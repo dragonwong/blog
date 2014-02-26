@@ -1,0 +1,87 @@
+---
+layout: article
+title: sort string in js
+tags: js sort string
+---
+
+<p>Here is an array consisting of		
+object, and we need to sort the array by attribution of objects.</p>
+
+<pre><code class="javascript">	var arr = [
+		{
+			num: 2,
+			str: 'c',
+			id: '10'
+		},
+		{
+			num: 10,
+			str: 'a',
+			id: '2'
+		},
+		{
+			num: 3,
+			str: 'b',
+			id: '1'
+		}
+	];</code></pre>
+
+<p>Here is the function of sortind.</p>
+
+<pre><code class="javascript">	function mysort(arr, sort_by){
+		arr.sort(function(arg_1, arg_2){
+			var val_1 = arg_1[sort_by],
+				val_2 = arg_2[sort_by];
+
+			return val_1 - val_2;
+		});
+	}</code></pre>
+
+<p>If we only need to sort by 'num', it works well. But we need to sort by other attribution, such as 'str', this code will not work. This is because when a string subtracts another string, the result is <code>NaN</code>. If we need to sort string, the code should be like this:</p>
+
+<pre><code class="javascript">	function mysort(arr, sort_by){
+		arr.sort(function(arg_1, arg_2){
+			var val_1 = arg_1[sort_by],
+				val_2 = arg_2[sort_by];
+
+			if(val_1 < val_2){
+				return -1;
+			}else if(val_1 > val_2){
+				return 1;
+			}else{
+				return 0;
+			}
+		});
+	}</code></pre>
+
+<p>But a new problem comes up when we sort by 'id'.</p>
+
+<pre><code class="javascript"></code>	'10' < '2' //true</pre>
+
+<p>We need to judge whether the value is a number or can be converted to a number. In javascript, function <code>isNaN()</code> work for this requirement.</p>
+
+<pre><code class="javascript">	isNaN(1)	//false
+	isNaN('1')	//false
+	isNaN('10/1')	//true
+	isNaN('10abc')	//true
+	isNaN('abc10')	//true</code></pre>
+
+<p>Our code can be like the following:</p>
+
+<pre><code class="javascript">	function mysort(arr, sort_by){
+		arr.sort(function(arg_1, arg_2){
+			var val_1 = arg_1[sort_by],
+				val_2 = arg_2[sort_by];
+
+			if(isNaN(val_1) || isNaN(val_2)){
+				if(val_1 < val_2){
+					return -1;
+				}else if(val_1 > val_2){
+			  		return 1;
+				}else{
+					return 0;
+				}
+			}else{
+				return val_1 - val_2;
+			}
+		});
+	}</code></pre>
