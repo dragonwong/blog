@@ -571,8 +571,7 @@ table.plain {
 
 .site-footer {
     position: relative;
-    margin: 8rem 0 0 0;
-    padding: 2rem 0;
+    padding: 1rem 0;
     border-top: #EBF2F6 1px solid;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
