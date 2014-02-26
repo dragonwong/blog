@@ -5,7 +5,7 @@ tags: js sort string
 ---
 
 <p>Here is an array consisting of		
-object, and we need to sort the array by attribution of objects.</p>
+objects, and we need to sort the array by attribution of objects.</p>
 
 <pre><code class="javascript">	var arr = [
 		{
@@ -25,7 +25,7 @@ object, and we need to sort the array by attribution of objects.</p>
 		}
 	];</code></pre>
 
-<p>Here is the function of sortind.</p>
+<p>Here is the function of sorting.</p>
 
 <pre><code class="javascript">	function mysort(arr, sort_by){
 		arr.sort(function(arg_1, arg_2){
@@ -53,19 +53,19 @@ object, and we need to sort the array by attribution of objects.</p>
 		});
 	}</code></pre>
 
-<p>But a new problem comes up when we sort by 'id'.</p>
+<p>But a new problem comes up when we sort by 'id'. Do not forget this:</p>
 
-<pre><code class="javascript"></code>	'10' < '2' //true</pre>
+<pre><code class="javascript">	'10' < '2' //true</code></pre>
 
-<p>We need to judge whether the value is a number or can be converted to a number. In javascript, function <code>isNaN()</code> work for this requirement.</p>
+<p>We need to judge whether the value is a number (or can be converted to a number). In javascript, function <code>isNaN()</code> work for this requirement.</p>
 
 <pre><code class="javascript">	isNaN(1)	//false
-	isNaN('1')	//false
-	isNaN('10/1')	//true
-	isNaN('10abc')	//true
-	isNaN('abc10')	//true</code></pre>
+	isNaN('1');	//false
+	isNaN('10/1');	//true
+	isNaN('10abc');	//true
+	isNaN('abc10');	//true</code></pre>
 
-<p>Our code can be like the following:</p>
+<p>Our code will be like the following finally:</p>
 
 <pre><code class="javascript">	function mysort(arr, sort_by){
 		arr.sort(function(arg_1, arg_2){
