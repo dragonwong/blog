@@ -475,7 +475,7 @@ table.plain {
 .post-footer {
     position: relative;
     margin: 4rem 0 0 0;
-    padding: 4rem 0 0 0;
+    padding: 4rem 0;
     border-top: #EBF2F6 1px solid;
 }
 
@@ -489,12 +489,6 @@ table.plain {
     font-size: 1.4rem;
     line-height: 1.6em;
 }
-
-/* Create some space to the right for the share links */
-.post-footer .author {
-    margin-right: 180px;
-}
-
 
 
 /* ==========================================================================
