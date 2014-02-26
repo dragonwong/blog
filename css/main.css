@@ -626,10 +626,6 @@ table.plain {
         line-height: 1.6em;
     }
 
-    .post-template .post {
-        padding-bottom: 1rem;
-    }
-
     .post-template .post-header {
         padding: 40px 0;
     }
@@ -716,10 +712,6 @@ table.plain {
 
     .post-meta {
         font-size: 1.3rem;
-    }
-
-    .post-footer {
-        padding: 4rem 0;
     }
 
     .post-footer .author {
