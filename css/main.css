@@ -461,7 +461,7 @@ table.plain {
 
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 /* Keep large images within the bounds of the post-width */
@@ -619,10 +619,7 @@ table.plain {
         font-size: 0.9em;
         line-height: 1.6em;
     }
-
-    .post-template .post-header {
-        padding: 40px 0;
-    }
+    
 
     h1 {
         font-size: 4.8rem;
