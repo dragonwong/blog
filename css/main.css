@@ -346,7 +346,6 @@ table.plain {
     margin: 2rem auto;
     padding-bottom: 2rem;
     border-bottom: #EBF2F6 1px solid;
-    word-break: break-word;
     hyphens: auto;
 }
 

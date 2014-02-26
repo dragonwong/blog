@@ -180,8 +180,8 @@ samp {
  * Improve readability of pre-formatted text in all browsers.
  */
 
-pre {
-    white-space: pre-wrap;
+pre>code{
+    overflow: auto;
 }
 
 /**
