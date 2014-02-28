@@ -1,0 +1,42 @@
+---
+layout: article
+title: Duff's Device in JavaScript
+tags: duff js
+---
+
+
+
+<p>I am reading <cite>High Performance JavaScript</cite> these days. This book introduces <strong>Duff's Device</strong> which can lead to greater performance gains in loops. I tested it and found that the efficiency is not higher than <code>for</code> or <code>while</code> eminently.</p>
+
+<p>Maybe in modern browsers, <code>for/while</code> has been optimized. Or my way of testing was not correct:</p>
+
+<pre class="javascript"><code>function duff(arr, pro){
+	var arr_length = arr.length,
+		times = Math.floor(arr_length/8),
+		remainder = arr_length%8;
+
+	while(remainder--){
+		pro(arr, remainder);
+	}
+
+	while(times--){
+		pro(arr, --arr_length);
+		pro(arr, --arr_length);
+		pro(arr, --arr_length);
+		pro(arr, --arr_length);
+		pro(arr, --arr_length);
+		pro(arr, --arr_length);
+		pro(arr, --arr_length);
+		pro(arr, --arr_length);
+	}
+}
+
+var arr = new Array(1000000);
+
+function pro(arr, index){
+	arr[index] = index;
+}
+
+console.time('duff');
+duff(arr, pro);
+console.timeEnd('duff');</code></pre>
