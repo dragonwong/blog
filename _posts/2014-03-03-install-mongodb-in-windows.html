@@ -1,0 +1,21 @@
+---
+layout: article
+title: install mongodb in windows
+tags: mongodb
+---
+
+<p>offical guide: <a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/" target="_blank">http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/</a></p>
+
+<p>How to run?</p>
+
+<p>open a command prompt, and run <code>mongod.exe</code>:</p>
+
+<pre class="bash"><code>d:\mongodb\bin\mongod.exe --dbpath d:\mongodb\data</code></pre>
+
+<p>use <code>--dbpath</code> to specify an alternate path. But I don't know how to make it as default.</p>
+
+<p>Then, open <strong>another</strong> command prompt and run <code>mongo.exe</code>:</p>
+
+<pre class="bash"><code>d:\mongodb\bin\mongo.exe</code></pre>
+
+<p>now, you can run mongo command here.</p>
