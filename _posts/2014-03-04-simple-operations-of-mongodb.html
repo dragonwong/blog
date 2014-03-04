@@ -1,0 +1,34 @@
+---
+layout: article
+title: simple operations of mongodb
+tags: mongodb
+---
+
+<p>Report the name of the current database:</p>
+
+<pre class="bash"><code>db</code></pre>
+
+<p>Display the list of databases:</p>
+
+<pre class="bash"><code>show dbs</code></pre>
+
+<p>Create or switch to a new database:</p>
+
+<pre class="bash"><code>use mydb</code></pre>
+
+<p>Delete the current database:</p>
+
+<pre class="bash"><code>db.dropDatabase()</code></pre>
+
+<p>Create a database and insert a document:</p>
+
+<pre class="bash"><code>j = { name : "mongo" }
+db.myCollection.insert( j )</code></pre>
+
+<p>Display the list of collections:</p>
+
+<pre class="bash"><code>show collections</code></pre>
+
+<p>Delete a database:</p>
+
+<pre class="bash"><code>db.myCollection.drop()</code></pre>
