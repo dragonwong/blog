@@ -6,6 +6,27 @@ tags: js encodeURI encodeURIComponent
 
 <p>In javascript, when we want to encode, we may use <code>encodeURI</code> and <code>encodeURIComponent</code>. What is the difference between them?</p>
 
-<h3>characters they do not encode</h3>
+<h2>characters they do not encode</h2>
 
-<p>encodeURI will not encode the following 82 characters: <code>!</code>, <code>#</code>, <code>$</code>, <code>&</code>, <code>'</code>, <code>(</code>, <code>)</code>, <code>*</code>, <code>+</code>, <code>,</code>, <code>-</code>, <code>.</code>, <code>/</code>, <code>:</code>, <code>;</code>, <code>=</code>, <code>?</code>, <code>@</code>, <code>_</code>, <code>~</code>, <code>0-9</code>, <code>a-z</code>, <code>A-Z</code></p>
+<p><code>encodeURI</code> will not encode the following 82 characters: <code>!</code>, <code>#</code>, <code>$</code>, <code>&amp;</code>, <code>'</code>, <code>(</code>, <code>)</code>, <code>*</code>, <code>+</code>, <code>,</code>, <code>-</code>, <code>.</code>, <code>/</code>, <code>:</code>, <code>;</code>, <code>=</code>, <code>?</code>, <code>@</code>, <code>_</code>, <code>~</code>, <code>0-9</code>, <code>a-z</code>, <code>A-Z</code></p>
+
+<p><code>encodeURIComponent</code> will not encode the following 71 characters: <code>!</code>, <code> '</code>, <code>(</code>, <code>)</code>, <code>*</code>, <code>-</code>, <code>.</code>, <code>_</code>, <code>~</code>, <code>0-9</code>, <code>a-z</code>, <code>A-Z</code></p>
+
+<p>It is obvious that <code>encodeURIComponent</code> will encode more characters than <code>encodeURI</code> including <code>:</code> and <code>/</code>. So <code>encodeURIComponent</code> will encode <code>http://</code> to <code>http%3A%2F%2F</code>, while <code>encodeURI</code> will not.</p>
+
+<h2>situations where they can be used</h2>
+
+<p>When you encode the whole URL, choose <code>encodeURI</code>:</p>
+
+<pre class="javascript"><code>encodeURI("http://www.cnblogs.com/season-huang/some other thing");
+//"http://www.cnblogs.com/season-huang/some%20other%20thing"</code></pre>
+
+<p>When you encode parameters of URL, choose <code>encodeURIComponent</code>, especially when the parameter contains <code>/</code>:</p>
+
+<pre class="javascript"><code>var param = "http://www.cnblogs.com/season-huang/";
+param = encodeURIComponent(param);
+var url = "http://www.cnblogs.com?next=" + param;
+console.log(url);
+//"http://www.cnblogs.com?next=http%3A%2F%2Fwww.cnblogs.com%2Fseason-huang%2F"</code></pre>
+
+<p>Refer to <a href="http://www.cnblogs.com/season-huang/p/3439277.html" target="_blank">简单明了区分escape、encodeURI和encodeURIComponent</a></p>
