@@ -1,0 +1,11 @@
+---
+layout: article
+title: encodeURI and encodeURIComponent
+tags: js encodeURI encodeURIComponent
+---
+
+<p>In javascript, when we want to encode, we may use <code>encodeURI</code> and <code>encodeURIComponent</code>. What is the difference between them?</p>
+
+<h3>characters they do not encode</h3>
+
+<p>encodeURI will not encode the following 82 characters: <code>!</code><code>#</code><code>$</code><code>&amp;</code><code>'</code><code>(</code><code>)</code><code>*</code><code>+</code><code>,</code><code>-</code><code>.</code><code>/</code><code>:</code><code>;</code><code>=</code><code>?</code><code>@</code><code>_</code><code>~</code><code>0-9</code><code>a-z</code><code>A-Z</code></p>
