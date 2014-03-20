@@ -1,0 +1,15 @@
+---
+layout: article
+title: Date().parse
+tags: js
+---
+
+<p><code>Date().parse</code>方法接受一个表示日期的字符串参数，然后尝试根据这个字符串返回相应日期的毫秒数。比如：</p>
+
+<pre class="javascript"><code>Date.parse('2014-02-28 08:00:00')
+//1393545600000</code></pre>
+
+<p>这段代码在chrome下是没有问题，但是，ie和ff都不能接受像<code>'2014-02-28 08:00:00'</code>这样的格式，他们接受这样的<code>'2014/02/28 08:00:00'</code>。chrome也能接受这样的。所以需要正则替换下：</p>
+
+<pre class="javascript"><code>Date.parse('2014-02-28 08:00:00'.replace(/-/g, '/'))
+//1393545600000</code></pre>
