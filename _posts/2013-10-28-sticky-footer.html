@@ -38,8 +38,8 @@ tags: html css
     }
         .main{
             min-height: 100%;
-            height: auto !important;
-            height: 100%;
+            _height: auto !important;
+            _height: 100%;
         }
             .body{
                 padding-bottom: 40px;
@@ -51,5 +51,7 @@ tags: html css
         }</code></pre>
 
 <p>自己做了一个优化，去除了<code>&lt;div class=".push"&gt;</code>，于是控制<code>&lt;footer&gt;</code>和<code>&lt;div class="main"&gt;</code>间隙的任务就落到<code>&lt;div class="main"&gt;</code>中最后一个元素（即<code>&lt;div class="body"&gt;</code>）身上。给<code>&lt;div class="body"&gt;</code>添加样式<code>padding-bottom</code>即可，距离至少是要是<code>&lt;footer&gt;</code>的高。</p>
+
+<p>但是这样会有一个缺点，<code>footer</code>的高度必须是固定的。比如说，当你窗口变窄了，导致<code>footer</code>内元素换行，那就悲剧了。</p>
 
 <p>传送门：<a href="https://rawgithub.com/dragonwong/mylib/master/component/sticky-footer.htm" target="_blank">demo</a>，<a href="https://github.com/dragonwong/mylib/blob/master/component/sticky-footer.htm" target="_blank">github</a></p>
