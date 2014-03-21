@@ -4,4 +4,39 @@ title: margin负值实现多栏布局高度撑开
 tags: css margin height
 ---
 
-<p>在实现多栏布局时，往往需要所有所有栏等高，若能设置<code>height: 100%;</code>那边是极好的，但height不是你想设就能设：<a href="" target="_blank">啊啊</a></p>
+<p>在实现多栏布局时，往往需要所有所有栏等高，若能设置<code>height: 100%;</code>那边是极好的，但height不是你想设就能设：<a href="http://dragonwong.github.io/blog/2014/03/20/height-100-%E5%A4%B1%E6%95%88.html" target="_blank">height: 100%;失效</a></p>
+
+<p>但是我们可以用<code>margin-bottom</code>负值来模拟。看下主要代码：</p>
+
+<p>html:</p>
+
+<pre class="html"><code><div class="box">
+	<div class="left"></div>
+	<div class="right"></div>
+</div></code></pre>
+
+<p>css:</p>
+
+<pre class="css"><code>.box{
+	overflow: hidden;
+}
+	.box .left{
+		float: left;
+		width: 30%;
+		margin-bottom: -1000px;
+		padding-bottom: 1000px;
+	}
+	.box .right{
+		margin-left: 30%;
+		margin-bottom: -1000px;
+		padding-bottom: 1000px;
+	}</code></pre>
+
+<p>这里核心的代码是这段css：</p>
+
+<pre class="css"><code>margin-bottom: -1000px;
+padding-bottom: 1000px;</code></pre>
+
+<p>其中，若<code>margin-bottom</code>值为<code>-x</code>，那么<code>padding-bottom</code>的值为<code>x</code>+期望最终显示的<code>padding-bottom</code>值。</p>
+
+<p>参考：<a href="http://dragonwong.github.io/demo/mult-col-height.htm" target="_blank">demo</a></p>
