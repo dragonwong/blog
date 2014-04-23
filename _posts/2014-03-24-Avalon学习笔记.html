@@ -18,11 +18,11 @@ tags: avalon
 
 <p>html</p>
 
-<pre class="html"><code>
+<pre class="html"><code>{%raw%}
 &lt;div class="tit"&gt;
-	{{notebooks.data[0].notebookName | escape}}
+	{{notebooks.data[0].notebookName}}
 	&lt;span class="cnt"&gt;({{notebooks.data[0].notesCount}})&lt;/span&gt;
-&lt;/div&gt;
+&lt;/div&gt;{%endraw%}
 </code></pre>
 
 <p><code>div.tit</code>定宽，内容过长会换行。所以可以意料到avalon渲染dom层前后会导致<code>div.tit</code>高度的变化。但最终应该都是一行的高度（因为内容很少）。</p>
