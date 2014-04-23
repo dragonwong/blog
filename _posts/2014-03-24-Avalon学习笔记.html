@@ -20,7 +20,7 @@ tags: avalon
 
 <pre class="html"><code>
 &lt;div class="tit"&gt;
-	{{notebooks.data[0].notebookName}}
+	{{notebooks.data[0].notebookName | escape}}
 	&lt;span class="cnt"&gt;({{notebooks.data[0].notesCount}})&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
