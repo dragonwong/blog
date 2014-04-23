@@ -4,11 +4,11 @@ title: Display Liquid Code in Jekyll
 tags: jekyll liquid
 ---
 
-<p>This blog is written by jekyll which use a templating engine called Liquid. Like almost other templating engines, Liquid use output tag looking like: <code>{{{{}}output{{'}}'}}</code>.</p>
+<p>This blog is written by jekyll which use a templating engine called Liquid. Like almost other templating engines, Liquid use output tag looking like: <code>{{"{{"}}output{{'}}'}}</code>.</p>
 
-<p>Now, how to display liquid code? It is obvious that I can not write <code>{{ “{{output “}}}}</code> directly. The solution is:</p>
+<p>Now, how to display liquid code? It is obvious that I can not write <code>{{ "{{output "}}}}</code> directly. The solution is:</p>
 
-<p>Put the code between <code>{%raw%}</code> and <code>{%endraw%}</code></p>
+<p>Put the code between <code>{{"{%raw"}}%}</code> and <code>{%endraw%}</code></p>
 
 <p>For example, if you want to output:</p>
 
