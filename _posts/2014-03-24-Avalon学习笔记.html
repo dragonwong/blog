@@ -18,8 +18,7 @@ tags: avalon
 
 <p>html</p>
 
-<pre class="html"><code>{%raw%}
-&lt;div class="tit"&gt;
+<pre class="html"><code>{%raw%}&lt;div class="tit"&gt;
 	{{notebooks.data[0].notebookName}}
 	&lt;span class="cnt"&gt;({{notebooks.data[0].notesCount}})&lt;/span&gt;
 &lt;/div&gt;{%endraw%}
@@ -27,6 +26,6 @@ tags: avalon
 
 <p><code>div.tit</code>定宽，内容过长会换行。所以可以意料到avalon渲染dom层前后会导致<code>div.tit</code>高度的变化。但最终应该都是一行的高度（因为内容很少）。</p>
 
-<p>问题出在样式上。如果加载本地样式，高度一行，符合预期，但如果加载线上样式（与本地完全一样），高度变为两行，尽管内容很少。</p>
+<p>问题出在样式上。如果加载本地样式，高度一行，符合预期，但如果加载线上样式（与本地完全一样），高度变为两行，感觉就像花括号表达式被替换后，高度没有恢复。</p>
 
-<p>还是不上demo了。太麻烦了。肯定和avalon有关系的。</p>
+<p>肯定和avalon有关，但是使用线上和线下完全相同的css为何又会导致不同呢？是因为css渲染和avalon渲染时间差的关系么？不懂。</p>
