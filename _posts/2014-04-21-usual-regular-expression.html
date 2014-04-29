@@ -1,0 +1,15 @@
+---
+layout: article
+title: usual regular expression
+tags: reg
+---
+
+<p>Remove html tags:</p>
+
+<pre class="javascript"><code>text.replace(/(&lt;([^&gt;]+)&gt;)/ig,"")</code></pre>
+
+<p>Get the text of the first p tag (if the first is empty, get the second, and the like):</p>
+
+<pre class="javascript"><code>var matches = /&lt;p[^&gt;]*&gt;([^&lt;]+)&lt;\/p&gt;/.exec(text);
+console.log(matches[1]);
+</code></pre>
