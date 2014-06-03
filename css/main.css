@@ -43,7 +43,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: 'Droid Serif', serif;
+    font-family: Arial;
     font-size: 2.0rem;
     line-height: 1.6em;
     color: #3A4145;
@@ -64,7 +64,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
-    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -332,7 +331,6 @@ table.plain {
     font-size: 1.8rem;
     line-height: 1.5em;
     font-weight: 300;
-    font-family: 'Droid Serif', serif;
     letter-spacing: 0;
 }
 
@@ -383,7 +381,6 @@ table.plain {
 .post-meta {
     display: inline-block;
     margin: 0 0 5px 0;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     color: #9EABB3;
 }
@@ -516,7 +513,6 @@ table.plain {
     width: 80%;
     max-width: 700px;
     margin: 4rem auto;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -565,7 +561,6 @@ table.plain {
     position: relative;
     padding: 1rem 0;
     border-top: #EBF2F6 1px solid;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
     color: #BBC7CC;
