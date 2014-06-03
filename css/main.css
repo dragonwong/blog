@@ -376,6 +376,7 @@ table.plain {
     margin: 1.6rem 0 0 0;
     font-size: 0.9em;
     line-height: 1.6em;
+    font-family: Times New Roman;
 }
 
 .post-meta {
@@ -459,6 +460,9 @@ table.plain {
     padding: 40px 0;
 }
 
+.post-content{
+    font-family: Times New Roman;
+}
 /* Keep large images within the bounds of the post-width */
 .post-content img {
     display: block;
@@ -483,6 +487,7 @@ table.plain {
     margin: 1rem 0;
     font-size: 1.4rem;
     line-height: 1.6em;
+    font-family: Times New Roman;
 }
 
 
