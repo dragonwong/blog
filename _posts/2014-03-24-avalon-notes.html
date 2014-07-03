@@ -10,9 +10,7 @@ tags: avalon
 
 <img src="http://pic.yupoo.com/dragonwong/DFY88BUf/14o7HU.png" alt="download avalon">
 
-<hr>
-
-<p>2014-4-22</p>
+<h3>2014-4-22 一个页面渲染的问题</h3>
 
 <p>今天项目终于完了，如愿以偿分到酒店，得以追随浩姐和司徒。赶紧填坑！先说一个奇特的bug！</p>
 
@@ -29,3 +27,20 @@ tags: avalon
 <p>问题出在样式上。如果加载本地样式，高度一行，符合预期，但如果加载线上样式（与本地完全一样），高度变为两行，感觉就像花括号表达式被替换后，高度没有恢复。</p>
 
 <p>肯定和avalon有关，但是使用线上和线下完全相同的css为何又会导致不同呢？是因为css渲染和avalon渲染时间差的关系么？不懂。</p>
+
+<h3>2014-7-3 关于数组的clear方法</h3>
+
+<p>入职第二天，整理下离职前的问题。好吧，先反省下。离职前信誓旦旦地和大姚哥说：</p>
+
+<blockquote>
+	<p>回去我会抓紧学习，争取入职时可以尽快上手。</p>
+</blockquote>
+
+<p>于是，离开北京的那一刻，我就已经忘得一干二净了(´·ω·`)。进入正题：</p>
+
+<p>之前写过类似这样的代码：</p>
+
+<pre class="html"><code>&lt;p ms-if="arr[0]"&gt;{{arr[0].name}}&lt;/p&gt;
+</code></pre>
+
+<p>在arr不为空的情况下异步使用<code>clear</code>方法清空数组会导致<code>arr[0].name</code>报错：<code>Cannot read property 'name' of undefined</code>，所以目测在avalon中<code>arr[0]</code>是不被建议的写法，不应该直接使用下标指定数组第几项，而应该使用<code>ms-repeat</code>和<code>$index</code>配合进行判断。</p>
