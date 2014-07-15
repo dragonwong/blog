@@ -37,7 +37,7 @@ str = String(1);</code></pre>
 <p>About conversions between String and Number in javascript, it is all over here. If you are interesting in</p>
 
 <blockquote>
-	<p>Hey! What's <code>1..toString</code>? Do you mean <code>1.toString</code>?</p>
+	<p>Hey! What's <code>1..toString()</code>? Do you mean <code>1.toString()</code>?</p>
 </blockquote>
 
 <p>Please read the following.</p>
@@ -50,6 +50,6 @@ num.toString();	//we will get 1
 
 <p>The thought is right but it is wrong in syntax. In <code>1.toString();</code>, <code>1</code> is a literal number. When the interpreter reads the dot after <code>1</code>, it expect another number to compose a decimal number. So the dot in <code>1.toString();</code> is not a dot of attribution, but a decimal point!</p>
 
-<p>Now, you known why we need another dot, so we get <code>1..toString</code>. Er, it looks a little strange indeed. We can use <code>1.0.toString();</code>or other methods mentioned above.</p>
+<p>Now, you known why we need another dot, so we get <code>1..toString()</code>. Er, it looks a little strange indeed, so we can use <code>1.0.toString();</code>or other methods mentioned above.</p>
 
-<p>Refer to: <a href="http://stackoverflow.com/q/6853865/2388446" target="_blank">Usage of toString in JavaScript [duplicate]</a>, <a href=""></a></p>
+<p>Refer to: <a href="http://stackoverflow.com/q/6853865/2388446" target="_blank">Usage of toString in JavaScript [duplicate]</a>.</p>
