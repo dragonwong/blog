@@ -1,14 +1,10 @@
 ---
 layout: article
-title: conversion between String and Number in javascript
+title: conversions between String and Number in javascript
 tags: js
 ---
 
 <h3>String to Number</h3>
-
-<P>1. </P>
-
-<p>2. In js, Setting the operation <code>+</code> in the front of code could be used to convert String to Number, but will not change the value. For example:</p>
 
 <pre class="javascript"><code>var num;
 //method_1
@@ -20,4 +16,40 @@ num = parseInt('1');	//or parseFloat()</code></pre>
 
 <p>The efficiency of method_2 and method_3 are similar while method_1 is a bit more efficient than them.</p>
 
-<p>Efficiency: <code>+str</code> &gt; <code>Number(str)</code> = <code>parseInt(str)</code></p>
+<p>Efficiency: <code>+'1'</code> &gt; <code>Number('1')</code> = <code>parseInt('1')</code></p>
+
+<h3>Number to String</h3>
+
+<pre class="javascript"><code>var str;
+//toString
+str = (1).toString();
+str = 1..toString();
+str = 1.0.toString();
+str = Number.prototype.toString.call(1);
+str = 1['toString']();
+//plus
+str = '' + 1;
+//String
+str = String(1);</code></pre>
+
+<p>Efficiency: <code>(1).toString()</code> &gt; <code>'' + 1</code> = <code>1..toString()</code> = <code>1.0.toString()</code> &gt; <code>1['toString']();</code> &gt; <code>Number.prototype.toString.call(1)</code> = <code>String(1)</code></p>
+
+<p>About conversions between String and Number in javascript, it is all over here. If you are interesting in</p>
+
+<blockquote>
+	<p>Hey! What's <code>1..toString</code>? Do you mean <code>1.toString</code>?</p>
+</blockquote>
+
+<p>Please read the following.</p>
+
+<h3>Convert a literal number to String</h3>
+
+<pre class="javascript"><code>var num = 1;
+num.toString();	//we will get 1
+1.toString();	//we will get SyntaxError: Unexpected token ILLEGAL</code></pre>
+
+<p>The thought is right but it is wrong in syntax. In <code>1.toString();</code>, <code>1</code> is a literal number. When the interpreter reads the dot after <code>1</code>, it expect another number to compose a decimal number. So the dot in <code>1.toString();</code> is not a dot of attribution, but a decimal point!</p>
+
+<p>Now, you known why we need another dot, so we get <code>1..toString</code>. Er, it looks a little strange indeed. We can use <code>1.0.toString();</code>or other methods mentioned above.</p>
+
+<p>Refer to: <a href="http://stackoverflow.com/q/6853865/2388446" target="_blank">Usage of toString in JavaScript [duplicate]</a>, <a href=""></a></p>
