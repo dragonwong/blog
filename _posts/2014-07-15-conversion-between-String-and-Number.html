@@ -1,0 +1,23 @@
+---
+layout: article
+title: conversion between String and Number in javascript
+tags: js
+---
+
+<h3>String to Number</h3>
+
+<P>1. </P>
+
+<p>2. In js, Setting the operation <code>+</code> in the front of code could be used to convert String to Number, but will not change the value. For example:</p>
+
+<pre class="javascript"><code>var num;
+//method_1
+num = +'1';
+//method_2
+num = Number('1');
+//method_3
+num = parseInt('1');	//or parseFloat()</code></pre>
+
+<p>The efficiency of method_2 and method_3 are similar while method_1 is a bit more efficient than them.</p>
+
+<p>Efficiency: <code>+str</code> &gt; <code>Number(str)</code> = <code>parseInt(str)</code></p>
