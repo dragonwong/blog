@@ -3,4 +3,5 @@ base_url: http://dragonwong.github.io/blog
 paginate: 8
 paginate_path: "/page/:num"
 
-cover_url: http://pic.yupoo.com/dragonwong/DMt8UdYt/r7nMK.jpg
+cover_l: http://pic.yupoo.com/dragonwong/DMt8UdYt/r7nMK.jpg
+cover_s: http://pic.yupoo.com/dragonwong/DMt8UdYt/medish.jpg

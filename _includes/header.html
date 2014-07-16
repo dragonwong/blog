@@ -7,11 +7,17 @@
 
 	<link rel="stylesheet" href="{{ site.base_url }}/css/main.css">
 	<style>
-	{% if site.cover_url %}
-		#site-head{
-			background-image: url({{ site.cover_url }});
+		/* cover */
+		@media only screen and (max-width: 1399px) {
+			#site-head{
+				background-image: url({{ site.cover_l }});
+			}
 		}
-	{% endif %}
+		@media only screen and (min-width: 1400px) {
+			#site-head{
+				background-image: url({{ site.cover_s }});
+			}
+		}
 	</style>
 	<!-- highlight.js -->
 	<link rel="stylesheet" href="{{ site.base_url }}/css/monokai_sublime.css">
