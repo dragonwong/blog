@@ -16,7 +16,7 @@ tags: js
 
 <p>But what about <strong>changing the contents of the element from JavaScript</strong>?</p>
 
-<p>The <a href="http://www.w3.org/TR/html5/forms.html#common-input-element-events" target="_blank">w3.org</a> writes:</p>
+<p><a href="http://www.w3.org/TR/html5/forms.html#common-input-element-events" target="_blank">w3.org</a> writes:</p>
 
 <blockquote>
 	<p>When the input and change events apply (which is the case for all input controls other than buttons and those with the type attribute in the Hidden state), the events are fired to indicate that the user has interacted with the control. <strong>The input event fires whenever the user has modified the data of the control</strong>. The change event fires when the value is committed, if that makes sense for the control, or else when the control loses focus. In all cases, the input event comes before the corresponding change event (if any).</p>
@@ -39,3 +39,5 @@ tags: js
 <p>In Chrome, <code>e.cancelable</code> is always <code>false</code>. In Firefox, when <code>oninput</code> is invoked by javascript, <code>e.cancelable</code> is <code>true</code>. We can take advantage of this point to do hack of Firefox.</p>
 
 <p>What? What about IE? Let's talk later...</p>
+
+<p>Refer to: <a href="http://help.dottoro.com/ljhxklln.php" target="_blank">oninput event | input event JavaScript</a>, <a href="http://www.w3.org/TR/html5/forms.html#common-input-element-events" target="_blank">4.10 Forms — HTML5</a>.</p>
