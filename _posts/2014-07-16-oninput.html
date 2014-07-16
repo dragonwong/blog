@@ -1,0 +1,41 @@
+---
+layout: article
+title: event oninput in javascript
+tags: js
+---
+
+<p>When I need to watch the user's input at real time, I prefer <code>oninput</code> to <code>onchange</code>. This is because <code>onchange</code> fires when the element loses focus, while <code>oninput</code> fires immediately after the modification.</p>
+
+<p>It is generally accepted that the actions invoke <code>oninput</code> are the following:</p>
+
+<ul>
+	<li>Entering some text into an element.</li>
+	<li>Cutting, deleting or pasting some content.</li>
+	<li>Dropping some content into an element. (only in Google Chrome and Safari)</li>
+</ul>
+
+<p>But what about <strong>changing the contents of the element from JavaScript</strong>?</p>
+
+<p>The <a href="http://www.w3.org/TR/html5/forms.html#common-input-element-events" target="_blank">w3.org</a> writes:</p>
+
+<blockquote>
+	<p>When the input and change events apply (which is the case for all input controls other than buttons and those with the type attribute in the Hidden state), the events are fired to indicate that the user has interacted with the control. <strong>The input event fires whenever the user has modified the data of the control</strong>. The change event fires when the value is committed, if that makes sense for the control, or else when the control loses focus. In all cases, the input event comes before the corresponding change event (if any).</p>
+</blockquote>
+
+<p>So, I think only the user's behavior will invoke <code>oninput</code>, and it is why the event 's name is 'input'. So changing the contents of the element from JavaScript should not invoke <code>oninput</code>.</p>
+
+<p>But Firefox do not think so... OK, I do not want to know why(maybe a bug), just hack it!</p>
+
+<p>I found this:</p>
+
+<pre class="javascript"><code>ip.oninput = function(e){
+	if(!e.cancelable){
+		console.log('user change me!');
+	}else{
+		console.log('js change me!');
+	}
+};</code></pre>
+
+<p>In Chrome, <code>e.cancelable</code> is always <code>false</code>. In Firefox, when <code>oninput</code> is invoked by javascript, <code>e.cancelable</code> is <code>true</code>. We can take advantage of this point to do hack of Firefox.</p>
+
+<p>What? What about IE? Let's talk later...</p>
