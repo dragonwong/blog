@@ -1,0 +1,30 @@
+---
+layout: article
+title: window可视区域
+tags: js
+---
+
+<p>今天看到徐子超同学的日报，有关window可视区域的内容，记录下，占个坑，以后填上。</p>
+
+<p>
+	网页可见区域宽：document.body.clientWidth // 就是body的宽度<br />
+	网页可见区域高：document.body.clientHeight // 就是body的高度<br />
+	网页可见区域宽：document.body.offsetWidth // 包括边线的宽<br />
+	网页可见区域高：document.body.offsetHeight // 包括边线的宽<br />
+	网页正文全文宽：document.body.scrollWidth // 不仅是当前可视区域的宽度也包括滚动条隐藏的页面的宽度<br />
+	网页正文全文高：document.body.scrollHeight<br />
+	网页被卷去的高：document.body.scrollTop // IE7无效<br />
+	网页被卷去的左：document.body.scrollLeft // IE7无效<br />
+	网页被卷去的高：document.documentElement.scrollTop // IE7有效<br />
+	网页被卷去的左：document.documentElement.scrollLeft // IE7有效<br />
+	网页正文部分上：window.screenTop<br />
+	网页正文部分左：window.screenLeft<br />
+	屏幕分辨率的高：window.screen.height<br />
+	屏幕分辨率的宽：window.screen.width //电脑屏幕的宽度和浏览器的大小变化没有关系<br />
+	屏幕可用工作区高度：window.screen.availHeight<br />
+	屏幕可用工作区宽度：window.screen.availWidth<br />
+	相对于窗口左上角的X：window.event.clientX<br />
+	相对于窗口左上角的Y：window.event.clientY<br />
+	相对于整个页面的X：window.event.X<br />
+	相对于整个页面的Y：window.event.Y<br />
+</p>
