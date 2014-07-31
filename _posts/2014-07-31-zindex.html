@@ -1,0 +1,47 @@
+---
+layout: article
+title: z-index
+tags: css
+---
+
+<p>先看代码：</p>
+
+<p>html：</p>
+
+<pre class="html"><code>&lt;body&gt;
+	&lt;div class="pa"&gt;
+		&lt;div class="ch ch-1"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="pa"&gt;
+		&lt;div class="ch ch-2"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+
+<p>css：</p>
+
+<pre class="css"><code>	.pa{
+		position: relative;
+	}
+		.ch{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+		}
+		.ch-1{
+			background: red;
+			z-index: 10;
+		}
+		.ch-2{
+			background: yellow;
+			z-index: 5;
+		}</code></pre>
+
+<p>猜下在各浏览器中的样子吧！在ie67中是黄色，其他浏览器是红色。</p>
+
+<p>介绍下<code>z-index</code>的背景。</p>
+
+<p>有效场景：<code>z-index</code>只有在<code>position</code>值为<code>relative</code>，<code>absolute</code>和<code>fixed</code>的元素上有效（即非<code>static</code>）。</p>
+
+<p>比较规则：基本上遵循“拼爹原则”。即先比较各自<strong>具有有效<code>z-index</code>属性的父辈元素</strong>，父辈元素的<code>z-index</code>大的则子元素都大（所以会产生这种情形：你是1000，可你爸爸是1人家爸爸是2，那么你照样打不过人家，这就是个拼爹的时代，多么痛的觉悟。。）。如果具有相同的<strong>具有有效<code>z-index</code>属性的父辈元素</strong>或者没有<strong>具有有效<code>z-index</code>属性的父辈元素，那就比较自己，这个时候才是拼自己。</p>
+
+<p>所以上面代码在一般浏览器里显示效果为红色。但ie67作为反人类的存在当然不能随波逐流。ie67会为<code>position</code>值为非<code>static</code>的元素添加样式<code>z-index: 0</code>。所以。。自己脑补为什么会是黄色吧。</p>
