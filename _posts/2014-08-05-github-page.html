@@ -1,0 +1,26 @@
+---
+layout: article
+title: github page
+---
+
+<p>从上个月31号以来，搭载在github page上的博客一直就不肯更新，导致写了新文章也发不出来。看到github 30号的blog：<a href="https://github.com/blog/1867-github-pages-now-runs-jekyll-2-2-0" target="_blank">《GitHub Pages now runs Jekyll 2.2.0》</a>，估摸到可能是因为github page更新的原因。今天才知道如果出错了会收到邮件通知，但是我用的是gmail，国内你懂得。。反正确实是收到了一封题为《[blog] Page build failure》的邮件，虽然没说具体是什么原因，但是确实是构建错误了。</p>
+
+<p>蛋疼了，只能在本地模拟建一个和github一样的环境跑下试试，看看报什么错。</p>
+
+<h3>Build Your Github Page On Local</h3>
+
+<p>主要遵循官网的教程：<a href="https://help.github.com/articles/using-jekyll-with-pages" target="_blank">《Using Jekyll with Pages》</a>，但是官网默认全世界都是mac用户。。。</p>
+
+<p>所以windows用户得自己先装ruby。去<a href="http://rubyinstaller.org/downloads/" target="_blank">RubyInstaller</a>下载就行，我下的是1.9.3稳定版。安装时最后会问你要不要添加环境变量什么的，放心全部统统都打钩！不是360！完了跑下<code>ruby -v</code>看看成功没。</p>
+
+<p>成功都话就可以跑<code>gem -v</code>看下有gem没（肯定有的）。改下gem的配置，原因你懂的：</p>
+
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}

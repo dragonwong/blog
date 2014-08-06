@@ -2,6 +2,7 @@ base_title: While's Blog
 base_url: http://dragonwong.github.io/blog
 paginate: 8
 paginate_path: "/page/:num"
+highlighter: pygments
 
 cover_l: http://pic.yupoo.com/dragonwong/DMt9l8Yd/dChvA.jpg
 cover_s: http://pic.yupoo.com/dragonwong/DMt9l8Yd/medish.jpg
