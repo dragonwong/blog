@@ -15,18 +15,8 @@ title: github page
 
 <p>成功都话就可以跑<code>gem -v</code>看下有gem没（肯定有的）。改下gem的配置，原因你懂的：</p>
 
-{% highlight ruby %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
+<pre class="bash"><code>gem sources -a http://ruby.taobao.org/</code></pre>
 
-{% highlight html %}
-<div class="class-name">
-	<pre><code>test html</code></pre>
-</div>
-{% endhighlight %}
+<p>完了可以查看下源列表</p>
+
+<pre class="bash"><code>gem sources -l</code></pre>
