@@ -28,7 +28,7 @@
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
-img.emoji{
+.post-content .emoji{
     display: inline;
 }
 
