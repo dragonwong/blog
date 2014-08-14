@@ -1,0 +1,11 @@
+---
+layout: article
+title: snippet in atom
+tags: snippet atom
+---
+
+<p>I started to use Atom these days. I try to write snippets and I find the document is not so specific. For example, I tried to override Atom's native snippets but failed and I do not why. See detail: <a href="https://github.com/atom/snippets/issues/67" target="_blank">How to override Atom's native snippets?</a></p>
+
+<p>To my surprise, Atom's snippet takes a strategy like CSS selector instead of the suffix of file name to match files. We can find 'classes' of a file by the following steps: Confirm the language of the file, for example it is html, then find <code>atom/language-html/grammars/html.cson</code>, in the first line you can see <code>'scopeName': 'text.html.basic'</code>, so html files's 'classes' is 'text', 'html' and 'basic'.</p>
+
+<p>The above is all based on my thought, if it is wrong I will not pay you <img class="emoji" title=":ghost:" alt=":ghost:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f47b.png" height="20" width="20" align="absmiddle">.</p>
