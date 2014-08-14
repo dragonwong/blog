@@ -5,7 +5,7 @@
 /*
 
     0.  Includes
-    1.  Icons
+    1.  Icons and emoji
     2.  General
     3.  Utilities
     4.  General
@@ -28,7 +28,9 @@
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
-
+img.emoji{
+    display: inline;
+}
 
 /* ==========================================================================
    2. General - Setting up some base styles
