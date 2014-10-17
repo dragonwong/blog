@@ -13,11 +13,11 @@ tags: diary
 <pre class="javascript"><code>var select = document.getElementById('select'),
 	options = [];
 
-for(var j = 1; j <= 6; j++){
+for(var j = 1; j &lt;= 6; j++){
     if(j == 3){
-        options.push( '<option selected="selected" value="' + j + '">' + j + '</option>' );
+        options.push( '&lt;option selected="selected" value="' + j + '"&gt;' + j + '&lt;/option&gt;' );
     }else{
-        options.push( '<option value="' + j + '">' + j + '</option>' );
+        options.push( '&lt;option value="' + j + '"&gt;' + j + '&lt;/option&gt;' );
     }
 };
 
@@ -27,4 +27,4 @@ select.innerHTML = options.join('');</code></pre>
 
 <p><img src="http://pic.yupoo.com/dragonwong/E8zzBl5o/medish.jpg" alt="select innerHTML in ie6"></p>
 
-<p>针对泯灭人性的 ie6，使用<code> outerHTML </code>，或者对 <code>select</code> 的父元素用 <code> innerHTML</code></p>
+<p>针对泯灭人性的 ie6，使用<code>outerHTML</code>，或者对 <code>select</code> 的父元素用 <code> innerHTML</code>。</p>
