@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: post
 title: conversions between String and Number in javascript
 tags: js
 ---
@@ -17,6 +17,15 @@ num = parseInt('1');	//or parseFloat()</code></pre>
 <p>The efficiency of method_2 and method_3 are similar while method_1 is a bit more efficient than them.</p>
 
 <p>Efficiency: <code>+'1'</code> &gt; <code>Number('1')</code> = <code>parseInt('1')</code></p>
+
+<p>By the way, performances of <code>parseInt('010')</code> are different from different browsers.</p>
+
+<pre class="javascript"><code>parseInt('010', 10)	// return 10 in all browsers
+
+parseInt('010') // return 8 in ie8-
+parseInt('010') // return 10 in others</code></pre>
+
+<p>So, there is no reason not to use <code>+str</code>.</p>
 
 <h3>Number to String</h3>
 
@@ -50,6 +59,6 @@ num.toString();	//we will get 1
 
 <p>The thought is right but it is wrong in syntax. In <code>1.toString();</code>, <code>1</code> is a literal number. When the interpreter reads the dot after <code>1</code>, it expect another number to compose a decimal number. So the dot in <code>1.toString();</code> is not a dot of attribution, but a decimal point!</p>
 
-<p>Now, you known why we need another dot, so we get <code>1..toString()</code>. Er, it looks a little strange indeed, so we can use <code>1.0.toString();</code>or other methods mentioned above.</p>
+<p>Now, you known why we need another dot, so we get <code>1..toString()</code>. Er, it looks a little strange indeed, so we can use <code>1.0.toString();</code> or <code>1 .toString();</code>.</p>
 
 <p>Refer to: <a href="http://stackoverflow.com/q/6853865/2388446" target="_blank">Usage of toString in JavaScript [duplicate]</a>.</p>

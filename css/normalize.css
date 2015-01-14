@@ -300,6 +300,12 @@ input {
     line-height: normal;
 }
 
+input {
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
@@ -356,9 +362,6 @@ input[type="radio"] {
 
 input[type="search"] {
     -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
 }
 
 /**
