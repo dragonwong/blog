@@ -1,5 +1,5 @@
 ---
-description: 1st Anniversary with MXY
+description: 生活，是毅种循环
 ---
 
 {% include header.html body_class="home-template" %}
@@ -23,7 +23,7 @@ description: 1st Anniversary with MXY
 			<header class="post-header">
 				<span class="post-meta">
 					<time datetime="{{ post.date | date: '%Y-%m-%-d' }}">{{ post.date | date_to_string }}</time>
-					{% if post.tags %}
+					{% if post.tags.size > 0 %}
 						on {{ post.tags | join: ', '}}
 					{% endif %}
 				</span>
