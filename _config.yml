@@ -1,7 +1,7 @@
 base_title: 大根的博客
 # base_url: http://127.0.0.1:4000
-base_url: http://192.168.199.129:4000
-# base_url: http://dragonwong.github.io/blog
+# base_url: http://192.168.199.129:4000
+base_url: http://dragonwong.github.io/blog
 paginate: 8
 paginate_path: "/page/:num"
 highlighter: pygments
