@@ -1,12 +1,10 @@
 ---
 layout: post
-title: js中很奇妙的问题
+title: 神奇的 js
 tags: js
 ---
 
-<p>今天小伙伴们分享了两个很奇妙的问题。</p>
-
-<p>先看第一个，结果应该是什么呢？</p>
+<h2>一</h2>
 
 <pre><code class="javascript">var length = 10;
 function fn(){
@@ -26,7 +24,9 @@ obj.method(fn);</code></pre>
 
 <p> <code>fn</code> 中的 <code>this</code> 指向的是 <code>window</code>，而 <code>arguments[0]</code> 中的 <code>this</code> 指向的是 <code>arguments</code> 对象，所以输出的是 <code>arguments.length</code>。</p>
 
-<p>第二个更屌：</p>
+<h2>二</h2>
+
+<p>这个更屌。</p>
 
 <pre><code class="javascript">var c = {};
 c.a = c = [];
@@ -49,3 +49,19 @@ console.log(c.a);
 console.log(b);</code></pre>
 
 <p>参考：<a href="http://cmc3.cn/n/217.html" target="_blank">《赋值运算符:"=" 写了10年javascript未必全了解的"="》</a></p>
+
+<h2>三</h2>
+
+<pre><code class="javascript">var foo = {
+    bar: function () {
+        console.log(this);
+    }
+};
+
+(foo.bar)(); 
+(foo.bar, foo.bar)();
+
+// Object {bar: function}
+// Window {...}</code></pre>
+
+<p>逗号表达式其实在做一次隐式的赋值，值赋给了隐式的暂存的变量。</p>
