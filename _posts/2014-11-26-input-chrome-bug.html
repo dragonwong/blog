@@ -4,6 +4,28 @@ title: chrome 自动填充 bug
 category: coding
 ---
 
-<p>chrome 记住登录信息后，在下次登录时会自动填充表单。但是在自动填充密码输入框时，输入框的值仍然为空，在点击页面任意位置后，输入框才会有值。</p>
+<p>chrome 记住登录信息后，在下次登录时会自动填充表单。但是在自动填充密码输入框时，输入框的值仍然为空（点击页面任意位置后，输入框才会有值）。如果你是 ajax 登录的话那就悲剧了。</p>
 
-<p>如果造成影响，可以取消通过接下来的方法避免自动填充：<a href="http://stackoverflow.com/a/15917221/2388446" target="_blank">Disabling Chrome Autofill</a>。</p>
+<p>目前没有比较好的解决方案，只能统一禁用掉记住密码功能。但是 chrome 的记住密码是无视 <code>autocomplete</code> 的（就是这么任性），又只能用些奇技淫巧了：用一个隐藏的 <code>input</code> 来欺骗浏览器，让浏览器自动填写在这个 <code>input</code> 里。这个 <code>input</code> 的 <code>name</code> 必须和 ajax 提交字段名一致。</p>
+
+<p>示例：</p>
+
+<pre class="html"><code>&lt;!-- 
+	chrome bug:
+	在记住用户信息时，在选择建议项时 blur，input 不会有值
+ --&gt;
+&lt;!-- 欺骗浏览器的 input --&gt;
+&lt;input type="text" name="id" value="" style="display:none;" /&gt;
+&lt;!-- 用户实际输入的 input --&gt;
+&lt;input type="text" autocomplete="off" /&gt;
+
+&lt;!-- 
+  - 在 chrome 下保存登录信息，浏览器会自动填写，但是此时密码框的 value 并未改变。
+  - 此处使用隐藏的 input 阻止密码自动填写。
+  --&gt;
+&lt;!-- 欺骗浏览器的 input --&gt;
+&lt;input type="password" name="password" value="" style="display:none;" /&gt;
+&lt;!-- 用户实际输入的 input --&gt;
+&lt;input type="password" /&gt;</code></pre>
+
+<p>参考：<a href="http://stackoverflow.com/a/15917221/2388446" target="_blank">Disabling Chrome Autofill</a>。</p>
