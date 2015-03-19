@@ -65,3 +65,23 @@ console.log(b);</code></pre>
 // Window {...}</code></pre>
 
 <p>逗号表达式其实在做一次隐式的赋值，值赋给了隐式的暂存的变量。</p>
+
+<h2>四</h2>
+
+<pre><code class="javascript">var value1 = value2 = value3 = 0;
+for (var i = 1; i <= 3; i++) {
+    var i2 = i;
+    (function() {
+        var i3 = i;
+        setTimeout(function() {
+            value1 += i;
+            value2 += i2;
+            value3 += i3;
+        }, 1);
+    })();
+}
+setTimeout(function() {
+    console.log(value1, value2, value3);
+}, 100);</code></pre>
+
+<p>控制台输出：<code>12 9 6</code>。</p>
