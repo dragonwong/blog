@@ -33,7 +33,7 @@ console.log(urlAnchor.hostname);</code></pre>
 
 <p>那 ie7- 怎么办呢？其实有个神奇的方法：<code>.getAttribute("href", 4)</code>，这个会返回绝对路径的。ie 竟然还有这个隐藏 api，也是醉了。（完整 api 见文末链接）</p>
 
-<p>那么一段兼容全部浏览的代码应该如下：</p>
+<p>那么一段兼容全部浏览器的代码应该如下：</p>
 
 <pre class="javascript"><code>var url = '/';
 var urlAnchor = document.createElement('a');
