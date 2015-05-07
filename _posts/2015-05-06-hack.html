@@ -1,0 +1,21 @@
+---
+layout: post
+title: css hack in ie7-
+category: coding
+---
+
+<p>There two simple selector hacks working in ie7-: <code>.selector\ {}</code> and <code>.selector, {}</code>.</p>
+
+<p>Pay attation to the space, it is necssary in <code>.selector\ {}</code> while not in <code>.selector, {}</code>.</p>
+
+<pre class="css"><code>.a, {color: red} /* works */
+.a\ {color: red} /* works */
+
+.a,{color: red} /* works */
+.a\{color: red} /* not works */</code></pre>
+
+<p>If you need to compress your css code, choose <code>.selector, {}</code>.</p>
+
+<p>Refer to: <a href="http://browserhacks.com/" target="_blank">browserhacks</a>.</p>
+
+<p>Extended reading: <a href="http://www.cnblogs.com/rubylouvre/archive/2009/10/14/1583362.html" target="_blank">javascript判断浏览器类型与版本</a></p>
