@@ -1,0 +1,10 @@
+---
+layout: post
+title: label 在 ie7 下点击触发两次 click 事件
+category: coding
+tags: ie7
+---
+
+<p>在 ie7 下，如果 label 元素包含样式为 <code>display: inline-block;</code> 的子元素，那么点击此 label 就会触发两次 click 事件（神经病啊！）。</p>
+
+<p>解决方法：click 事件内部使用 <code>event.preventDefault()</code> 阻止传播。</p>
