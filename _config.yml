@@ -8,3 +8,6 @@ highlighter: pygments
 
 cover_l: http://pic.yupoo.com/dragonwong/DMt9l8Yd/dChvA.jpg
 cover_s: http://pic.yupoo.com/dragonwong/DMt9l8Yd/medish.jpg
+
+gems:
+  - jemoji
