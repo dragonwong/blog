@@ -348,17 +348,17 @@ table.plain {
 	width: 0;
 	transition: width ease 0.3s;
 }
-#search-form.active{
+#search-form.active {
 	width: 200px;
 }
-	.search-input{
+	.search-input {
 		width: 0px;
 		height: 32px;
 		box-sizing: border-box;
 		font-size: 12px;
 		color: #fff;
 		background: transparent;
-		transition: width ease 0.3s;
+		transition: width ease 0.5s;
 	}
 	#search-form.active .search-input {
 		width: 200px;
@@ -376,6 +376,13 @@ table.plain {
 		height: 20px;
 		color: #fff;
 	}
+		.icon-search {
+			transition: all ease 0.5s;
+		}
+		#search-form.active .icon-search {
+			transform: rotate(360deg);
+		}
+
 	.search-button:focus {
     	outline: 0;
 	}
