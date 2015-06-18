@@ -325,6 +325,7 @@ table.plain {
 	margin: 10px 0 10px 0;
 	font-size: 5rem;
 	letter-spacing: -1px;
+	text-shadow: 1px 1px 1px #999;
 }
 
 .blog-description {
@@ -334,6 +335,7 @@ table.plain {
 	font-weight: 300;
 	letter-spacing: 0;
 	font-family: Times New Roman;
+	text-shadow: 1px 1px 1px #999;
 }
 
 #search-form {
