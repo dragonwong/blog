@@ -6,8 +6,13 @@ paginate: 8
 paginate_path: "/page/:num"
 highlighter: pygments
 
-cover_l: http://pic.yupoo.com/dragonwong/DMt9l8Yd/dChvA.jpg
-cover_s: http://pic.yupoo.com/dragonwong/DMt9l8Yd/medish.jpg
+# 重庆夜景
+# cover_l: http://pic.yupoo.com/dragonwong/DMt9l8Yd/dChvA.jpg
+# cover_s: http://pic.yupoo.com/dragonwong/DMt9l8Yd/medish.jpg
+
+# 承德避暑山庄
+cover_l: http://pic.yupoo.com/dragonwong/EJH1t8AO/aEPcA.jpg
+cover_s: http://pic.yupoo.com/dragonwong/EJH1t8AO/medish.jpg
 
 gems:
   - jemoji
