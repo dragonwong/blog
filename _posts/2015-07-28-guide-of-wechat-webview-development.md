@@ -23,9 +23,9 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 ###iOS
 
-微信在 iOS 设备中使用 Safari 打开 webview，并且，使用 Safari 可以很方便的通过 Mac 进行调试（Safari: develop -> userName -> deviceName ）
+微信在 iOS 设备中使用 Safari 打开 webview，并且，使用 Safari 可以很方便的通过 Mac 进行调试（Safari: develop -> userName -> deviceName ）。
 
-注：手机上的 Safari 需要打开调试功能，默认是开启的（设置 -> Safari -> 高级 -> Web 检查器）
+注：手机上的 Safari 需要打开调试功能，默认是开启的（设置 -> Safari -> 高级 -> Web 检查器）。
 
 ---
 
@@ -47,7 +47,7 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 ####2. JS接口安全域名
 
-填写测试页面的域名或ip
+填写测试页面的域名或 ip
 
 **注意：**一定是一级域名，且不带 `http://`
 
@@ -63,7 +63,7 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 `grant_type` 用默认的；`appid` 和 `secret` 用测试号提供的。
 
-**注意：** `access_token` 有效期为 `7200` 秒（即2小时内接口未被调用，ticket 失效），请适时更新。
+**注意：** `access_token` 有效期为 `7200` 秒（即2小时内接口未被调用，则失效），请适时更新。
 
 ####2. 获取 `ticket`
 
@@ -71,7 +71,7 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 参数 `ACCESS_TOKEN` 为上一步获取的 `access_token`。
 
-**注意：** `ticket` 有效期为 `7200` 秒（即2小时内接口未被调用，ticket 失效），请适时更新。
+**注意：** `ticket` 有效期为 `7200` 秒（即2小时内接口未被调用，则失效），请适时更新。
 
 ####3. 获取 `signature`
 
@@ -81,7 +81,7 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 ###三. 本地调用
 
-请保证顺序：先引用，再调用
+请保证顺序：先引用，再调用。
 
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
