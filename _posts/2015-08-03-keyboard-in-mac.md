@@ -3,16 +3,14 @@ layout: post
 title: Mac 下的键盘
 category: coding
 tags: keyboard
-excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
+excerpt: Karabiner，KeyRemap4MacBook 的前身，久经考验的免费软件，现已加入豪华午餐。
 ---
 
 换了 Mac 换不起键盘，或者仍然怀念着全键盘，但是 Mac 不支持传统键盘的特殊键（如：<kbd>Home</kbd>），该肿么办？
 
 隆重推出 Mac 改键神器 —— [Karabiner](https://pqrs.org/osx/karabiner/)。
 
-> 现已加入豪华午餐。
-
-Karabiner，KeyRemap4MacBook 的前身，久经考验的免费软件。下面举几例，感受下他的独特威力。
+Karabiner，KeyRemap4MacBook 的前身，久经考验的免费软件，现已加入豪华午餐。下面举几例，感受下他的强大威力。
 
 ##<kbd>Home</kbd>, <kbd>End</kbd>
 
