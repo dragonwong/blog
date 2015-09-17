@@ -1,7 +1,7 @@
 ---
 layout: post
-title: -webkit-overflow-scrolling: touch throw exception in iOS webView
-tags: scrolling
+title: -webkit-overflow-scrolling touch throw exception in iOS webView
+tags: -webkit-overflow-scrolling
 ---
 
 `-webkit-overflow-scrolling: touch;` 是一段 css 的样式代码，如果它出现在 iOS app 的 webView 中，有可能会引发程序报出异常错误。错误日志如下：
