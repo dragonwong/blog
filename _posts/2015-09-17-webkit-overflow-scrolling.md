@@ -17,7 +17,5 @@ tags: -webkit-overflow-scrolling
 
 ## 参考
 
-- http://stackoverflow.com/questions/26217160/webkit-throwing-exception-on-ios-8-for-call-to-setbeingremoved
-- http://stackoverflow.com/questions/25894173/uiwebview-throwing-exception-for-webactiondisablingcalayerdelegate-setbeingremo
-
-
+- [WebKit throwing exception on iOS 8 for call to setBeingRemoved](http://stackoverflow.com/questions/26217160/webkit-throwing-exception-on-ios-8-for-call-to-setbeingremoved)
+- [UIWebView throwing exception for [WebActionDisablingCALayerDelegate setBeingRemoved:]](http://stackoverflow.com/questions/25894173/uiwebview-throwing-exception-for-webactiondisablingcalayerdelegate-setbeingremo)
