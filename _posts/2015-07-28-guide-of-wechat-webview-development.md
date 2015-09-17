@@ -10,6 +10,7 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 - [页面调试](#page)
 - [接口调试](#api)
+- [其他问题](#others)
 
 ---
 
@@ -116,3 +117,7 @@ pc 和手机连同一局域网，手机微信访问 pc 服务。
 官网文档：[微信JS-SDK说明文档](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html)
 
 官方 demo：[微信JS-SDK Demo](http://203.195.235.76/jssdk/)
+
+<h2 id="others">其他问题</h2>
+
+- Android 微信下行内元素必须 `display: block;` 才具能设置 `width` 和 `background-image`
