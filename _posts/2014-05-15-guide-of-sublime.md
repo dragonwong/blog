@@ -21,7 +21,7 @@ tags: sublime
 
 ### 包
 
-Emmet：前端神器，<a href="http://dragonwong.github.io/blog/2013/11/21/install-emmet-on-sublime-text.html" target="_blank">install emmet on sublime text</a>，<a href="http://yanxyz.github.io/emmet-docs/" target="_blank">Emmet 文档</a>，<a href="http://docs.emmet.io/cheat-sheet/" target="_blank">Emmet Documentation</a>
+Emmet：前端神器，<a href="http://blog.wangdagen.com/2013/11/21/install-emmet-on-sublime-text.html" target="_blank">install emmet on sublime text</a>，<a href="http://yanxyz.github.io/emmet-docs/" target="_blank">Emmet 文档</a>，<a href="http://docs.emmet.io/cheat-sheet/" target="_blank">Emmet Documentation</a>
 
 jsFormat: js 格式化工具
 
