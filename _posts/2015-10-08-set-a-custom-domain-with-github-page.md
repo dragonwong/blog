@@ -2,6 +2,7 @@
 layout: post
 title: 私有域名 github 个人站点教程
 tags: blog
+excerpt: 五级大根刷新大，中路单挑怕不怕。
 ---
 
 今天在静轩的怂恿下买下了 [wangdagen.com](http://wangdagen.com/) 这个域名，哈哈我才是王大根，豆瓣那个好坏的抢我名字，害我老被问：
