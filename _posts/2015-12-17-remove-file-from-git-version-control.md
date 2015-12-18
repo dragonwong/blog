@@ -7,12 +7,10 @@ excerpt: 有些情况下我们需要从 Git 历史（版本控制）中删除文
 
 有些情况下我们需要从 Git 历史（版本控制）中删除文件。比如误提交了些东西（隐私信息、无用的编译文件之类）或者你是处女座。此时我们需要采取以下方法：
 
-```bash
-# 强力删除全提交全分支文件。--all 表示全分支。
+<pre class="bash"><code># 强力删除全提交全分支文件。--all 表示全分支。
 git filter-branch --tree-filter 'rm -f xxx' HEAD --all
 # 强力提交，覆盖远程。
-git push -f
-```
+git push -f</code></pre>
 
 太暴力了。简直杀人无痕。慎用。Git 官方文档称其为核武器选项[^git_doc]，大家感受下。
 

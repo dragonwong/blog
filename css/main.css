@@ -535,6 +535,10 @@ table.plain {
 	display: block;
 }
 
+.footnotes ol {
+	padding-left: 2rem;
+}
+
 /* The author credit area after the post */
 .post-footer {
 	position: relative;
@@ -761,14 +765,20 @@ table.plain {
 	}
 
 
-	h1, h2 {
+	h1 {
 		font-size: 3rem;
 		line-height: 1.1em;
 		letter-spacing: -1px;
 	}
 
-	h3 {
+	h2 {
 		font-size: 2.8rem;
+		line-height: 1.1em;
+		letter-spacing: -1px;
+	}
+
+	h3 {
+		font-size: 2.6rem;
 	}
 
 	h4 {

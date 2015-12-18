@@ -42,7 +42,7 @@ excerpt: 五级大根刷新大，中路单挑怕不怕。
 访问你的 [username.github.io](http://username.github.io) ，怎样，出现了吧。
 
 
-好了，现在博客也有了，虽然只有一句很傻逼的 `xxx 我爱你` <img class="emoji" title=":joy:" alt=":joy:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f602.png" height="20" width="20">。
+好了，现在博客也有了，虽然只有一句很傻逼的 `xxx 我爱你` :joy:。
 
 ## 最后，合体吧
 
@@ -74,7 +74,7 @@ CNAME 纪录是用来配置**将域名解析到的目标地址的域名** 的。
 
 五级大根刷新大，中路单挑怕不怕。
 
-结语我乱写的，我就是想说写完啦 <img class="emoji" title=":joy:" alt=":joy:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f602.png" height="20" width="20">。
+结语我乱写的，我就是想说写完啦 :joy:。
 
 ## 参考
 
