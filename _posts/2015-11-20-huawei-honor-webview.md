@@ -21,22 +21,19 @@ excerpt: 荣耀6真是一款神奇的机型，在它的 webview 中，输入框�
 
 #### html
 
-```html
-<body>
-    <div class="container">
-        <input type="text">
-        <p>占位</p>
-        <input type="text">
-        <p>占位</p>
-        <input type="text">
-    </div>
-</body>
-```
+<pre class="html"><code>&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;input type="text"&gt;
+        &lt;p&gt;占位&lt;/p&gt;
+        &lt;input type="text"&gt;
+        &lt;p&gt;占位&lt;/p&gt;
+        &lt;input type="text"&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
 
 #### css
 
-```css
-body {
+<pre class="css"><code>body {
     height: 100%;
 }
 .container {
@@ -45,8 +42,7 @@ body {
 }
 p {
     margin: 200px 0;
-}
-```
+}</code></pre>
 
 ### 场景重现
 
@@ -64,26 +60,23 @@ p {
 
 #### html
 
-```html
-<div class="container">
-    <input type="text">
-    <p>占位</p>
-    <input type="text">
-    <p>占位</p>
-    <input type="text">
-</div>
-<!-- 添加的 dom -->
-<div class="outer">
-    <div class="inner">
-        <input type="text">
-    </div>
-</div>
-```
+<pre class="html"><code>&lt;div class="container"&gt;
+    &lt;input type="text"&gt;
+    &lt;p&gt;占位&lt;/p&gt;
+    &lt;input type="text"&gt;
+    &lt;p&gt;占位&lt;/p&gt;
+    &lt;input type="text"&gt;
+&lt;/div&gt;
+&lt;!-- 添加的 dom --&gt;
+&lt;div class="outer"&gt;
+    &lt;div class="inner"&gt;
+        &lt;input type="text"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 #### css
 
-```css
-body {
+<pre class="css"><code>body {
     height: 100%;
 }
 .container {
@@ -104,8 +97,7 @@ p {
     position: absolute;
     bottom: 0;
     width: 100%;
-}
-```
+}</code></pre>
 
 ### 场景重现
 
