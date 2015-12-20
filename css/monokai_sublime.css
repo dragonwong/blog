@@ -36,11 +36,14 @@
   color: #ae81ff;
 }
 
+.hljs-selector-class,
+.hljs-attr,
 .hljs-tag .hljs-value,
 .hljs-code,
 .hljs-title,
 .css .hljs-class,
 .hljs-class .hljs-title:last-child {
+  /*绿色*/
   color: #a6e22e;
 }
 
@@ -59,6 +62,8 @@
   font-style: italic;
 }
 
+.hljs-selector-tag,
+.hljs-name,
 .hljs-keyword,
 .hljs-change,
 .hljs-winutils,
@@ -77,6 +82,7 @@
 .css .hljs-tag,
 .css .unit,
 .css .hljs-important {
+  /*红色*/
   color: #F92672;
 }
 
