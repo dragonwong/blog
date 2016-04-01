@@ -4,7 +4,7 @@ base_title: 大根的博客
 base_url: http://blog.wangdagen.com
 paginate: 8
 paginate_path: "/page/:num"
-highlighter: pygments
+highlighter: rouge
 
 # 重庆夜景
 # cover_l: http://pic.yupoo.com/dragonwong/DMt9l8Yd/dChvA.jpg

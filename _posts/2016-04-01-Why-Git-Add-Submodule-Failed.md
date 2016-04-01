@@ -42,3 +42,7 @@ fatal: You are on a branch yet to be born
 ## 结语
 
 我还是想知道：你们为毛不要 master 分支。。
+
+## 参考
+
+[Git submodules: Specify a branch/tag](http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag)
