@@ -18,11 +18,11 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 微信内置 webview 最大的问题在于蛋疼的缓存。Android 设备没有提供刷新功能，iOS 设备虽然提供了可是然并卵。html 文件是可以及时更新，但是 css、js 文件必须通过加版本号的方式才能刷新（`app@VERSION.js`）（其实就是改文件名），网上盛传的通过加请求参数的方法（`app.js?v=VERSION`）并不可靠。
 
-###Android
+### Android
 
 微信在 Android 设备中使用内置 QQ 浏览器（x5 内核）打开 webview，所以可以在设备上安装该浏览器来模拟微信环境。
 
-###iOS
+### iOS
 
 微信在 iOS 设备中使用 Safari 打开 webview，并且，使用 Safari 可以很方便的通过 Mac 进行调试（Safari: develop -> userName -> deviceName ）。
 
@@ -38,27 +38,27 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 请按以下顺序操作：
 
-###一. 登录微信公众平台
+### 一. 登录微信公众平台
 
 入口：[测试号登录](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login)
 
-####1. 接口配置信息
+#### 1. 接口配置信息
 	
 不用填写
 
-####2. JS接口安全域名
+#### 2. JS接口安全域名
 
 填写测试页面的域名或 ip
 
 **注意：**一定是一级域名，且不带 `http://`
 
-####3. 测试号
+#### 3. 测试号
 
 扫码关注。该测试号针对当前项目唯一生成（关注了别的项目的测试号并没有用）。只有关注了该测试号的微信账户才能调用相关接口。也就是说，包括开发人员和测试人员在内，所有会浏览调用了微信接口页面的人都需要关注。
 	
-###二. 获取信息
+### 二. 获取信息
 
-####1. 获取 `access_token`
+#### 1. 获取 `access_token`
 
 [在线工具](http://mp.weixin.qq.com/debug/)
 
@@ -66,7 +66,7 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 **注意：** `access_token` 有效期为 `7200` 秒（即2小时内接口未被调用，则失效），请适时更新。
 
-####2. 获取 `ticket`
+#### 2. 获取 `ticket`
 
 [接口](https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=ACCESS_TOKEN&type=jsapi)
 
@@ -74,13 +74,13 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
 
 **注意：** `ticket` 有效期为 `7200` 秒（即2小时内接口未被调用，则失效），请适时更新。
 
-####3. 获取 `signature`
+#### 3. 获取 `signature`
 
 [在线工具](http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign)
 
 `jsapi_ticket` 为上一步获取的 `ticket`；`noncestr` 为任意字符串；`timestamp` 为任意时间戳；`url` 为当前页面的的 `URL`，但不包含 `hash`（即不包含 `#` 及其后面部分）。
 
-###三. 本地调用
+### 三. 本地调用
 
 请保证顺序：先引用，再调用。
 
@@ -108,7 +108,7 @@ excerpt: 微信内置 webview 最大的问题在于蛋疼的缓存。
         })
     </script>
     
-###四. 微信访问
+### 四. 微信访问
 
 pc 和手机连同一局域网，手机微信访问 pc 服务。
 
