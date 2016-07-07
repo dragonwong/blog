@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello Thailand: 前传
+title: 'Hello Thailand: 前传'
 tags: 游记
 excerpt: 上个月一个人去泰国玩了十多天，众亲朋好友听说后都觉得一颗赛艇，纷纷要求传授人生经验，我实在也不是谦虚，于是接受了中央的决定，挖个大坑，把这次游记给回忆出来。
 ---
