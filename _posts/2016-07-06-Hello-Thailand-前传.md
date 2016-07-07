@@ -59,7 +59,7 @@ excerpt: 上个月一个人去泰国玩了十多天，众亲朋好友听说后�
 
 泰国711就有卖的，不用带了。大概长这样：
 
-![](http://img1.16fan.com/attachment/forum/201401/16/152325loc8i79a7bo8o9oh.jpg.thumb.jpg)
+![](http://o9whvdaz2.bkt.clouddn.com/2016-07-07-14678614578812.jpg)
 
 必备啊，谁去泰国谁知道。。
 
