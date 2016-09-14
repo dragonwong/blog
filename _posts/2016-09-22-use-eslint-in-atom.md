@@ -102,8 +102,9 @@ indent_size = 2
 ## 参考
 
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-- [linter-eslint](https://atom.io/packages/linter-eslint)
-- [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
-- [Atom EditorConfig](https://github.com/sindresorhus/atom-editorconfig)
+- [linter-eslint | Atom](https://atom.io/packages/linter-eslint)
+- [eslint-config-airbnb | Github](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+- [Atom EditorConfig | Github](https://github.com/sindresorhus/atom-editorconfig)
 - [Setup ES6+Babel+JSX Linting with Atom](https://gist.github.com/darokel/90fe5c8ad8df5efcab6b)
-- [babel-eslint](https://github.com/babel/babel-eslint)
+- [babel-eslint | Github](https://github.com/babel/babel-eslint)
+- [eslint 官网](http://eslint.org/)
