@@ -121,6 +121,7 @@ indent_size = 2
 
 ## 参考
 
+- [eslint-config-airbnb - NPM](https://www.npmjs.com/package/eslint-config-airbnb)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [linter-eslint - Atom](https://atom.io/packages/linter-eslint)
 - [eslint-config-airbnb - Github](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
