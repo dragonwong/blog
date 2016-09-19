@@ -37,9 +37,29 @@ apm install linter-eslint
 
 ```bash
 # 使 eslint 支持 AirBnb 编码规范。
-npm install --save-dev eslint-config-airbnb babel-eslint eslint-plugin-react
+export PKG=eslint-config-airbnb;
+npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG"
 # 使 eslint 支持 ES7 编码规范。
 npm install babel-eslint --save-dev
+```
+
+或者先在 `package.json` 中添加如下依赖：
+
+```js
+"devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.2.1"
+}
+```
+
+然后安装依赖：
+
+```bash
+npm install --only=dev
 ```
 
 > 因为 ES7 现在还是草案，各大厂商也并未正式支持，现在只能依赖 babel 的解析。因此，此处我们还需要安装 `babel-eslint`，使 eslint 支持 ES7 的新特性。
