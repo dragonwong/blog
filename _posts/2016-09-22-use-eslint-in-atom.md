@@ -116,7 +116,7 @@ indent_size = 2
 1. `.editorconfig` 不是实时生效的，你需要重启 Atom 后才能生效；
 2. `.eslintrc` 也不是实时生效的，你需要在 Atom 中运行 `linter: lint` 命令或者重新打开待检测文件才能生效；
 3. 在 Atom 中运行 `Linter Eslint: Fix File` 命令可以让 Atom 自动完成简单的格式化操作；
-4. 以上实现的编码规范为我们团队自己定制，大家可以根据自己的需要自由定制。
+4. 以上实现的编码规范为我们团队自己定制（已整理独立配置模块 [eslint-config-pintec](https://www.npmjs.com/package/eslint-config-pintec)），大家可以根据自己的需要自由定制。
 
 
 ## 参考
